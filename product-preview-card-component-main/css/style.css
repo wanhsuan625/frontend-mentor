@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap");
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(30, 38%, 92%);
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 600px;
+  height: 450px;
+  background-color: #ffffff;
+  color: hsl(228, 12%, 48%);
+  border-radius: 15px;
+  box-shadow: 3px 3px 20px 5px #b4b4b4;
+  display: flex;
+  font-size: 14px;
+  font-family: Montserrat;
+}
+.container .figure {
+  margin: 0;
+  width: 50%;
+}
+.container .figure .figure__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 0 0 15px;
+  background-image: url(../images/image-product-desktop.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  width: 50%;
+  padding: 15px 30px;
+}
+.content .content__category {
+  letter-spacing: 5px;
+  margin-bottom: 0;
+}
+.content .content__title {
+  color: #000000;
+  margin: 0;
+  padding: 20px 0;
+  line-height: 33px;
+  font-family: Fraunces;
+  font-size: 32px;
+}
+.content .content__text {
+  line-height: 23px;
+  margin: 0;
+}
+.content .content__price-box {
+  display: flex;
+  align-items: center;
+}
+.content .content__price-box h2 {
+  color: hsl(158, 36%, 37%);
+  font-family: Fraunces;
+  font-size: 32px;
+  margin: 0;
+  padding: 20px;
+  padding-left: 0;
+}
+.content .content__price-box p {
+  text-decoration: line-through;
+}
+.content .content__button {
+  width: 236px;
+  height: 48px;
+  cursor: pointer;
+  background-color: hsl(158, 36%, 37%);
+  color: #ffffff;
+  border: 0;
+  border-radius: 10px;
+  padding: 15px 0;
+}
+.content .content__button:hover {
+  box-shadow: 0 5px 5px #b4b4b4;
+}
+.content .content__button:active {
+  background-color: hsl(158, 36%, 48%);
+}
+.content .content__button .content__button__box {
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .content__button .content__button__box img {
+  padding-right: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 30px 0;
+  }
+  .container .figure {
+    width: 100%;
+    padding-top: 75%;
+  }
+  .container .figure .figure__img {
+    border-radius: 15px 15px 0 0;
+    background-image: url(../images/image-product-mobile.jpg);
+    position: absolute;
+    top: 0;
+  }
+  .container .content {
+    width: 100%;
+    padding: 20px 30px 30px 30px;
+  }
+  .container .content .content__button {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container {
+    width: 90%;
+  }
+  .container .content {
+    padding: 20px 20px 30px 20px;
+  }
+}/*# sourceMappingURL=style.css.map */
