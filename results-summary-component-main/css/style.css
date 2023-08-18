@@ -11,7 +11,7 @@ body {
 }
 
 .wrapper {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,4 +135,57 @@ body {
 }
 .data-container .data-container__button:active {
   box-shadow: 2px 5px 10px rgba(48, 59, 89, 0.5);
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    display: block;
+  }
+  .main {
+    width: 85%;
+    display: block;
+    margin: 25px auto;
+  }
+  .show-container {
+    width: 100%;
+  }
+  .data-container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main {
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .show-container {
+    padding: 20px 30px;
+    border-radius: 0 0 32px 32px;
+  }
+  .show-container .show-container__title {
+    font-size: 18px;
+  }
+  .show-container .show-container__score {
+    width: 140px;
+    height: 140px;
+    margin: 15px auto;
+  }
+  .show-container .show-container__score .show-container__score-box div {
+    font-size: 60px;
+  }
+  .show-container .show-container__text {
+    margin: 10px 0;
+    padding: 0;
+  }
+  .data-container {
+    padding: 20px 30px;
+  }
+  .data-container .data-container__title {
+    font-size: 23px;
+  }
+  .data-container .data-container__content .inner-box:last-child {
+    margin-bottom: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
