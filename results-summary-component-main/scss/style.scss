@@ -21,6 +21,7 @@ body{
 }
 .main{
     width: 740px;
+    box-shadow: 0px 0px 20px 10px #cecece;
     background-color: $white;
     border-radius: 32px;
     display: flex;
@@ -29,7 +30,7 @@ body{
     width: 50%;
     border-radius: 32px;
     padding: 40px 30px;
-    background: linear-gradient($gradient_1, $gradient_2);
+    background: linear-gradient( $gradient_1 , $gradient_2 );
     text-align: center;
 
     .show-container__title{
@@ -42,7 +43,7 @@ body{
         height: 200px;
         margin: 30px auto;
         color: $primary;
-        background: linear-gradient($gradient_3, transparent);
+        background: linear-gradient( $gradient_3 , transparent );
         border-radius: 50%;
 
         .show-container__score-box{
@@ -77,5 +78,79 @@ body{
         color: $primary;
         font-size: 18px;
         padding: 0 25px;
+    }
+}
+
+.data-container{
+    width: 50%;
+    padding: 40px 30px;
+
+    .data-container__title{
+        margin: 0;
+        padding-bottom: 20px;
+    }
+
+    .data-container__content{
+        .inner-box{
+            width: 100%;
+            height: 56px;
+            padding: 8px 15px 8px 50px;
+            margin-bottom: 16px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            img{
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                left: 15px;
+            }
+
+            .inner-box__number{
+                color: $secondary_light;
+
+                .inner-box__number__score{
+                    color: #000000;
+                    font-weight: 800;
+                }
+            }
+        }
+        .inner-box:last-child{ margin-bottom: 50px; }
+
+        .red-box{
+            background-color: $backgroun_red;
+            color: $red;
+        }
+        .yellow-box{
+            background-color: $backgroun_yellow;
+            color: $yellow;
+        }
+        .green-box{
+            background-color: $backgroun_green;
+            color: $green;
+        }
+        .blue-box{
+            background-color: $backgroun_blue;
+            color: $blue;
+        }
+    }
+
+    .data-container__button{
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+        color: $white;
+        background-color: $secondary;
+        border-radius: 128px;
+
+        &:hover{
+            cursor: pointer;
+            background: linear-gradient( $gradient_1 , $gradient_2 );
+        }
+        &:active{
+            box-shadow: 2px 5px 10px $secondary_light;
+        }
     }
 }
