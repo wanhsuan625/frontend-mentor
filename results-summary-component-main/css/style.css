@@ -30,7 +30,7 @@ body {
   width: 50%;
   border-radius: 32px;
   padding: 40px 30px;
-  background: linear-gradient(#4b4ef3, #2F2CE9);
+  background: linear-gradient(#6240FC, #2F2CE9);
   text-align: center;
 }
 .show-container .show-container__title {
@@ -131,7 +131,7 @@ body {
 }
 .data-container .data-container__button:hover {
   cursor: pointer;
-  background: linear-gradient(#4b4ef3, #2F2CE9);
+  background: linear-gradient(#6240FC, #2F2CE9);
 }
 .data-container .data-container__button:active {
   box-shadow: 2px 5px 10px rgba(48, 59, 89, 0.5);
