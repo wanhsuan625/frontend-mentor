@@ -1,0 +1,16 @@
+$blue: #666CA3;
+$blue_dark: #13183F;
+$gray: #83869A;
+$pink_dark: #F74780;
+$pink: #FFA7C3;
+$white: #FFFFFF;
+
+$background: #F0F1FF;
+$primary: #FF6F48;
+$gradient_primary: #F02AA6;
+$gradient_secondary: #4851FF;
+
+// GRADIENT
+@mixin gradient_background( $color1 , $color2 ){
+    background: linear-gradient( $color1 , $color2);
+}

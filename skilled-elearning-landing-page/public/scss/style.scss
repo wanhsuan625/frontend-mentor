@@ -1,0 +1,14 @@
+@import './color.scss';
+
+*{
+    position: relative;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding:0;
+}
+.wrapper{
+    height: 100vh;
+    @include gradient_background($white , $background);
+}
