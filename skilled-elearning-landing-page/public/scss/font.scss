@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap');
+
+// HEAD
+$font-head-xl: 56px;
+$font-head-l: 40px;
+$font-head-m: 32px;
+$font-head-s: 24px;
+
+// BODY
+$font-m: 18px;
+$font-s: 16px;
+
+// FONT VARIABLE
+@mixin font( $size , $weight ) {
+    font: {
+        family: 'Plus Jakarta Sans';
+        weight: $weight;
+        size: $size;
+    }
+}
