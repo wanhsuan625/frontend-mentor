@@ -88,6 +88,7 @@ html, body {
 .intro .pattern-container__img {
   height: 900px;
   background-image: url("../../starter-code/assets/image-hero-desktop.png");
+  background-position: left;
   background-repeat: no-repeat;
 }
 
@@ -173,5 +174,67 @@ html, body {
   }
   .intro .pattern-container {
     right: -37%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container, .intro, .content {
+    width: 90%;
+  }
+  .intro {
+    padding-bottom: 120px;
+  }
+  .intro .intro-container {
+    width: 60%;
+    padding: 30px 0;
+  }
+  .intro .intro-container__title {
+    font-family: "Plus Jakarta Sans";
+    font-weight: 800;
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+  .intro .intro-container__discription {
+    font-family: "Plus Jakarta Sans";
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  .intro .pattern-container {
+    width: 640px;
+    right: -285px;
+  }
+  .intro .pattern-container__img {
+    height: 700px;
+    background-image: url("../../starter-code/assets/image-hero-tablet.png");
+  }
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  .content__title {
+    padding: 50px 30px;
+    font-family: "Plus Jakarta Sans";
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .content__box {
+    padding: 50px 25px 70px 25px;
+  }
+  .content__box__title {
+    font-family: "Plus Jakarta Sans";
+    font-weight: 800;
+    font-size: 18px;
+  }
+  .content__box__discription {
+    font-family: "Plus Jakarta Sans";
+    font-weight: 500;
+    font-size: 16px;
+    margin: 20px 0;
+    line-height: 25px;
+  }
+  .content__box__href {
+    bottom: 30px;
   }
 }/*# sourceMappingURL=style.css.map */

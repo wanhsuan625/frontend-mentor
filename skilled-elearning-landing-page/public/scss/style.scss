@@ -89,6 +89,7 @@ html , body{
         &__img{
             height: 900px;
             background-image: url('../../starter-code/assets/image-hero-desktop.png');
+            background-position: left;
             background-repeat: no-repeat;
         }
     }
@@ -177,6 +178,65 @@ html , body{
         }
         .pattern-container{
             right: -37%;
+        }
+    }
+}
+
+@media screen and ( max-width: 1024px ){
+    .container , .intro , .content{ width: 90%;}
+    .intro{
+        padding-bottom: 120px;
+
+        .intro-container{
+            width: 60%;
+            padding: 30px 0;
+
+            &__title{
+                @include font( $font-head-l , 800 );
+                margin-bottom: 25px;
+            }
+            &__discription{
+                @include font( $font-s , 500 );
+                margin-bottom: 25px;
+            }
+        }
+
+        .pattern-container{
+            width: 640px;
+            right: -285px;
+
+            &__img{
+                height: 700px;
+                background-image: url('../../starter-code/assets/image-hero-tablet.png');
+            }
+        }
+    }
+
+    .content{
+        grid-template-columns: repeat( 2 , 1fr );
+        column-gap: 10px;
+
+        &__title{
+            padding: 50px 30px;
+            @include font( $font-head-s , 800 );
+            line-height: 32px;
+        }
+        &__box{
+            padding: 50px 25px 70px 25px;
+
+            &__title{
+                @include font( $font-m , 800 );
+            }
+
+            &__discription{
+                @include font( $font-s , 500 );
+                margin: 20px 0;
+                line-height: 25px;
+            }
+
+            &__href{
+                bottom: 30px;
+            }
         }
     }
 }
