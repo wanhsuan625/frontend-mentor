@@ -1,14 +1,162 @@
 @import './color.scss';
+@import './font.scss';
 
 *{
     position: relative;
     box-sizing: border-box;
 }
-body{
+html , body{
+    height: 100%;
     margin: 0;
-    padding:0;
+    padding: 0;
 }
+
 .wrapper{
-    height: 100vh;
-    @include gradient_background($white , $background);
+    @include gradient( $white 30% , $background );
+    min-height: 100vh;
+    overflow: hidden;       // hide the pattern in intro-container
+}
+// FOR ALL BUTTON SETTING
+.container{
+    max-width: 1110px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button{
+    cursor: pointer;
+    border: 0;
+    border-radius: 28px;
+    padding: 15px 30px;
+    color: $white;
+    @include font( $font-m , 700);
+    
+    &:hover{ opacity: 0.5; }
+    &:active{ box-shadow: 0 6px 10px 0px $gray; }
+}
+
+// --- HEADER ------------------------------------------
+.header{
+    width: 100%;
+    padding: 20px 0px;
+    z-index: 1;
+
+    .nav{
+        &__button{ 
+            background-color: $blue_dark;
+        }
+    }
+}
+
+// --- BANNER ------------------------------------------
+.intro{
+    max-width: 1110px;
+    display: flex;
+    padding: 20px 0;
+    margin: 0 auto;
+
+    .intro-container{
+        width: 460px;
+        padding: 150px 0;
+
+        &__title{
+            margin: 0;
+            margin-bottom: 30px;
+            @include font( $font-head-xl , 800 );
+        }
+
+        &__discription{
+            margin: 0;
+            margin-bottom: 30px;
+            @include font( $font-m , 500 );
+        }
+
+        &__button{
+            @include gradient( $gradient_neutral , $gradient_primary );
+        }
+    }
+
+    .pattern-container{
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+    }
+}
+
+// --- CONTENT ------------------------------------------
+.content{
+    max-width: 1110px;
+    margin: 0 auto;
+    padding-bottom: 150px;
+    display: grid;
+    grid-template-columns: repeat( 3 , 1fr );
+    gap: 56px 30px;
+
+    &__title{
+        padding: 50px;
+        padding-bottom: 150px;
+        color: $white;
+        border-radius: 15px;
+        @include font( $font-head-m , 800 );
+        @include gradient;
+    }
+
+    &__box{
+        border-radius: 15px;
+        background-color: $white;
+        padding: 50px 30px 80px 30px;
+
+        &__icon{
+            position: absolute;
+            top: -28px;
+        }
+
+        &__title{
+            margin: 0;
+            @include font( $font-head-s , 700 );
+        }
+
+        &__discription{
+            margin: 25px 0;
+            line-height: 28px;
+            color: $gray;
+            @include font( $font-m , 500 );
+        }
+
+        &__href{
+            text-decoration: none;
+            color: $pink_dark;
+            @include font( $font-m , 700);
+            position: absolute;
+            bottom: 50px;
+
+            &:hover{ color: $pink;}
+        }
+    }
+}
+
+
+
+// --- FOOTER ------------------------------------------
+.footer{
+    width: 100%;
+    height: 120px;
+    background-color: $blue_dark;
+
+    .button{
+        @include gradient( $gradient_secondary , $gradient_primary );
+    }
+
+    .white-background{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: $white;
+        border-radius: 28px;
+        top: 0;
+        left: 0;
+    }
 }
