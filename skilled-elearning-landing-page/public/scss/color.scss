@@ -6,11 +6,11 @@ $pink: #FFA7C3;
 $white: #FFFFFF;
 
 $background: #F0F1FF;
-$primary: #FF6F48;
+$gradient_neutral: #FF6F48;
 $gradient_primary: #F02AA6;
 $gradient_secondary: #4851FF;
 
 // GRADIENT
-@mixin gradient_background( $color1 , $color2 ){
+@mixin gradient( $color1: $gradient_neutral , $color2: $gradient_primary ){
     background: linear-gradient( $color1 , $color2);
 }
