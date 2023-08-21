@@ -178,7 +178,7 @@ html, body {
 }
 @media screen and (max-width: 1024px) {
   .container, .intro, .content {
-    width: 90%;
+    width: 95%;
   }
   .intro {
     padding-bottom: 120px;
@@ -201,7 +201,7 @@ html, body {
   }
   .intro .pattern-container {
     width: 640px;
-    right: -285px;
+    right: -280px;
   }
   .intro .pattern-container__img {
     height: 700px;
@@ -209,8 +209,6 @@ html, body {
   }
   .content {
     grid-template-columns: repeat(2, 1fr);
-    -moz-column-gap: 10px;
-         column-gap: 10px;
   }
   .content__title {
     padding: 50px 30px;
@@ -236,5 +234,60 @@ html, body {
   }
   .content__box__href {
     bottom: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .intro {
+    padding-bottom: 50px;
+  }
+  .intro .intro-container {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 679px) {
+  .intro {
+    padding: 0;
+  }
+  .intro .intro-container {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .intro .pattern-container {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  .intro .pattern-container__img {
+    height: 500px;
+    background-image: url("../../starter-code/assets/image-hero-mobile@2x.png");
+    background-size: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .button {
+    padding: 14px 25px;
+    font-family: "Plus Jakarta Sans";
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .intro .intro-container {
+    padding-bottom: 30px;
+  }
+  .intro .intro-container__title {
+    margin-bottom: 15px;
+  }
+  .intro .pattern-container__img {
+    height: 350px;
+    background-image: url("../../starter-code/assets/image-hero-mobile.png");
+    background-size: auto;
+    background-position: center;
+  }
+  .content {
+    grid-template-columns: 1fr;
+    padding-top: 0;
+  }
+  .content__title {
+    padding: 20px 30px 35px 30px;
   }
 }/*# sourceMappingURL=style.css.map */

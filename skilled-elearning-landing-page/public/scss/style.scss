@@ -183,7 +183,7 @@ html , body{
 }
 
 @media screen and ( max-width: 1024px ){
-    .container , .intro , .content{ width: 90%;}
+    .container , .intro , .content{ width: 95%;}
     .intro{
         padding-bottom: 120px;
 
@@ -203,7 +203,7 @@ html , body{
 
         .pattern-container{
             width: 640px;
-            right: -285px;
+            right: -280px;
 
             &__img{
                 height: 700px;
@@ -214,7 +214,6 @@ html , body{
 
     .content{
         grid-template-columns: repeat( 2 , 1fr );
-        column-gap: 10px;
 
         &__title{
             padding: 50px 30px;
@@ -237,6 +236,73 @@ html , body{
             &__href{
                 bottom: 30px;
             }
+        }
+    }
+}
+
+//  TABLET
+@media screen and ( max-width: 767px ){
+    .intro{
+        padding-bottom: 50px;
+
+        .intro-container{
+            width: 45%;
+        }
+    }
+}
+
+@media screen and ( max-width: 679px ){
+    .intro{
+        padding: 0;
+
+        .intro-container{
+            width: 100%;
+            padding: 10px 0;    
+        }
+
+        .pattern-container{
+            position: relative;
+            width: 100%;
+            top: 0;
+            left: 0;
+
+            &__img{
+                height: 500px;
+                background-image: url('../../starter-code/assets/image-hero-mobile@2x.png');
+                background-size: 100%;
+            }
+        }
+    }
+}
+
+// MOBILE
+@media screen and ( max-width : 480px ){
+    .button{ 
+        padding: 14px 25px;
+        @include font( $font-s , 700 );
+    }
+    .intro{
+        .intro-container{
+            padding-bottom: 30px;
+            &__title{ margin-bottom: 15px;}
+        }
+        
+        .pattern-container{
+            &__img{
+                height: 350px;
+                background-image: url('../../starter-code/assets/image-hero-mobile.png');
+                background-size: auto;
+                background-position: center;
+            }
+        }
+    }
+
+    .content{
+        grid-template-columns: 1fr;
+        padding-top: 0;
+
+        &__title{
+            padding: 20px 30px 35px 30px;
         }
     }
 }
