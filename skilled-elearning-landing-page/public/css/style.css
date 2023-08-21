@@ -11,7 +11,7 @@ html, body {
 }
 
 .wrapper {
-  background: linear-gradient(#FFFFFF 30%, #F0F1FF);
+  background: linear-gradient(#FFFFFF, #F0F1FF);
   min-height: 100vh;
   overflow: hidden;
 }
@@ -39,7 +39,7 @@ html, body {
   opacity: 0.5;
 }
 .button:active {
-  box-shadow: 0 6px 10px 0px #83869A;
+  box-shadow: 0 6px 10px 0px #979797;
 }
 
 .header {
@@ -53,12 +53,11 @@ html, body {
 
 .intro {
   max-width: 1110px;
-  display: flex;
-  padding: 20px 0;
+  padding: 50px 0;
   margin: 0 auto;
 }
 .intro .intro-container {
-  width: 460px;
+  width: 42%;
   padding: 150px 0;
 }
 .intro .intro-container__title {
@@ -70,7 +69,9 @@ html, body {
 }
 .intro .intro-container__discription {
   margin: 0;
-  margin-bottom: 30px;
+  color: #83869A;
+  margin-bottom: 40px;
+  line-height: 28px;
   font-family: "Plus Jakarta Sans";
   font-weight: 500;
   font-size: 18px;
@@ -79,15 +80,21 @@ html, body {
   background: linear-gradient(#FF6F48, #F02AA6);
 }
 .intro .pattern-container {
+  width: 1000px;
   position: absolute;
-  left: 50%;
-  bottom: 0;
+  top: -30%;
+  right: -40%;
+}
+.intro .pattern-container__img {
+  height: 900px;
+  background-image: url("../../starter-code/assets/image-hero-desktop.png");
+  background-repeat: no-repeat;
 }
 
 .content {
   max-width: 1110px;
   margin: 0 auto;
-  padding-bottom: 150px;
+  padding: 30px 0 150px 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 56px 30px;
@@ -154,4 +161,17 @@ html, body {
   border-radius: 28px;
   top: 0;
   left: 0;
+}
+
+@media screen and (max-width: 1280px) {
+  .container, .intro, .content {
+    width: 95%;
+  }
+  .intro .intro-container {
+    padding: 100px 0;
+    width: 40%;
+  }
+  .intro .pattern-container {
+    right: -37%;
+  }
 }/*# sourceMappingURL=style.css.map */
