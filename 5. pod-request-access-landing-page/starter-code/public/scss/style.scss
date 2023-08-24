@@ -1,3 +1,121 @@
-@import 'color.css';
-@import 'font.css';
+@import 'color.scss';
+@import 'font.scss';
 
+*{
+    position: relative;
+    box-sizing: border-box;
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// WRAPPER  and BACKGROUND
+.wrapper{
+    min-height: 100vh;
+    background-color: $background;
+}
+.background{
+    width: 100%;
+    height: 640px;
+    position: absolute;
+    background: {
+        image: url('../images/desktop/image-host.jpg');
+        repeat: no-repeat;
+        size: auto;
+        position: right 40% top;
+    }
+    filter: grayscale(100%);
+    opacity: 0.1;
+}
+
+
+// LOGO
+.header{
+    width: 100%;
+    padding: 50px 0;
+    @include flex-center;
+}
+
+// CONTENT
+.main{
+    width: 100%;
+    padding: 0 24px;
+}
+.intro{
+
+    &__title{
+        margin: 0;
+        color: $primary;
+        text-align: center;
+        @include font($font-head-s);
+
+        span{
+            color: $white;
+            display: block;
+            margin-top: 10px;
+        }
+    }
+
+    &__content{
+        color: $secondary_lighter;
+        line-height: 25px;
+        margin: 0;
+        padding: 20px 14px;
+        text-align: center;
+        @include font($font-xs);
+    }
+}
+
+.social-container{
+    width: 100%;
+    margin: 0;
+    display: grid;
+    align-items: center;
+    column-gap: 15px;
+    grid-template-columns: 1fr 1fr 1.5fr 1.5fr;
+
+    &__img{
+        height: auto;
+        max-width: 100%;
+    }
+}
+
+.input-container{
+    padding: 50px 0;
+
+    &__input , &__button{
+        width: 100%;
+        cursor: pointer;
+        padding: 10px 20px;
+        margin-bottom: 16px;
+        border-radius: 28px;
+        border: 0;
+        @include font( $font-xs );
+        font-weight: 700;
+        color: $white;
+        background-color: $secondary;
+    }
+
+    &__button{
+        margin: 0;
+        text-align: center;
+        color: #000000;
+        background-color: $primary;
+    }
+    &__button:hover{
+        background-color: $primary_light;
+    }
+    &__button:active{
+        box-shadow: 0 5px 10px 0 $shadow;
+        transform: translate(0px, 1px);
+    }
+}

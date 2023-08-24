@@ -5,15 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./public/css/style.css">
+
   <title>Frontend Mentor | Pod request access landing page</title>
 </head>
 <body>
-  Publish your podcasts everywhere.
+  <div class="wrapper">
+    <div class="background"></div>
 
-  Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
-  Apple Podcasts, Google Podcasts, Pocket Casts and more!
+    <!-- HEAJDER -->
+    <header class="header">
+      <img
+        class="header__logo"
+        src="./public/images/desktop/logo.svg"
+        alt="">
+    </header>
+    <!-- END HEADER -->
 
-  Request access
+    <main class="main">
+      <section class="intro">
+        <h1 class="intro__title">PUBLISH YOUR PODCASTS
+          <span>EVERYWHERE.</span>
+        </h1>
+        <p class="intro__content">
+          Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
+          Apple Podcasts, Google Podcasts, Pocket Casts and more!
+        </p>
+      </section>
+
+      <figure class="social-container">
+        <img
+          class="social-container__img"
+          src="./public/images/desktop/spotify.svg"
+          alt="">
+        <img
+          class="social-container__img"
+          src="./public/images/desktop/apple-podcast.svg"
+          alt="">
+        <img
+          class="social-container__img"
+          src="./public/images/desktop/google-podcasts.svg"
+          alt="">
+        <img 
+          class="social-container__img"
+          src="./public/images/desktop/pocket-casts.svg"
+          alt="">
+      </figure>
+
+        <div class="input-container">
+          <input
+            class="input-container__input"
+            type="text"
+            placeholder="Email address">
+          <button class="input-container__button">Request Access</button>
+        </div>
+    </main>
+
+  </div>
 </body>
 </html>
