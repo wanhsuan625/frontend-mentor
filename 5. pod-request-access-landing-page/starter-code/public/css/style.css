@@ -1,0 +1,294 @@
+@import 'color.css';
+@import 'font.css';/*# sourceMappingURL=style.css.map */500;700;800&display=swap");
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  background: linear-gradient(#FFFFFF, #F0F1FF);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1110px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 28px;
+  padding: 15px 30px;
+  color: #FFFFFF;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  font-size: 18px;
+}
+.button:hover {
+  opacity: 0.5;
+}
+.button:active {
+  box-shadow: 0 6px 10px 0px #979797;
+}
+
+.header {
+  width: 100%;
+  padding: 20px 0px;
+  z-index: 1;
+}
+.header .nav__button {
+  background-color: #13183F;
+}
+
+.intro {
+  max-width: 1110px;
+  padding: 50px 0;
+  margin: 0 auto;
+}
+.intro .intro-container {
+  width: 42%;
+  padding: 150px 0;
+}
+.intro .intro-container__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 800;
+  font-size: 56px;
+}
+.intro .intro-container__discription {
+  margin: 0;
+  color: #83869A;
+  margin-bottom: 40px;
+  line-height: 28px;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 500;
+  font-size: 18px;
+}
+.intro .intro-container__button {
+  background: linear-gradient(#FF6F48, #F02AA6);
+}
+.intro .pattern-container {
+  width: 1000px;
+  position: absolute;
+  top: -30%;
+  right: -40%;
+}
+.intro .pattern-container__img {
+  height: 900px;
+  background-image: url("../../starter-code/assets/image-hero-desktop.png");
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.content {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 30px 0 150px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 56px 30px;
+}
+.content__title {
+  padding: 50px;
+  padding-bottom: 150px;
+  color: #FFFFFF;
+  border-radius: 15px;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 800;
+  font-size: 32px;
+  background: linear-gradient(#FF6F48, #F02AA6);
+}
+.content__box {
+  border-radius: 15px;
+  background-color: #FFFFFF;
+  padding: 50px 30px 80px 30px;
+}
+.content__box__icon {
+  position: absolute;
+  top: -28px;
+}
+.content__box__title {
+  margin: 0;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  font-size: 24px;
+}
+.content__box__discription {
+  margin: 25px 0;
+  line-height: 28px;
+  color: #83869A;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 500;
+  font-size: 18px;
+}
+.content__box__href {
+  text-decoration: none;
+  color: #F74780;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  font-size: 18px;
+  position: absolute;
+  bottom: 50px;
+}
+.content__box__href:hover {
+  color: #FFA7C3;
+}
+
+.footer {
+  width: 100%;
+  height: 120px;
+  background-color: #13183F;
+}
+.footer .button {
+  background: linear-gradient(#4851FF, #F02AA6);
+}
+.footer .white-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #FFFFFF;
+  border-radius: 28px;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1280px) {
+  .container, .intro, .content {
+    width: 95%;
+  }
+  .intro .intro-container {
+    padding: 100px 0;
+    width: 40%;
+  }
+  .intro .pattern-container {
+    right: -37%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container, .intro, .content {
+    width: 95%;
+  }
+  .intro {
+    padding-bottom: 120px;
+  }
+  .intro .intro-container {
+    width: 60%;
+    padding: 30px 0;
+  }
+  .intro .intro-container__title {
+    font-family: "Plus Jakarta Sans";
+    font-weight: 800;
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+  .intro .intro-container__discription {
+    font-family: "Plus Jakarta Sans";
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  .intro .pattern-container {
+    width: 640px;
+    right: -280px;
+  }
+  .intro .pattern-container__img {
+    height: 700px;
+    background-image: url("../../starter-code/assets/image-hero-tablet.png");
+  }
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .content__title {
+    padding: 50px 30px;
+    font-family: "Plus Jakarta Sans";
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .content__box {
+    padding: 50px 25px 70px 25px;
+  }
+  .content__box__title {
+    font-family: "Plus Jakarta Sans";
+    font-weight: 800;
+    font-size: 18px;
+  }
+  .content__box__discription {
+    font-family: "Plus Jakarta Sans";
+    font-weight: 500;
+    font-size: 16px;
+    margin: 20px 0;
+    line-height: 25px;
+  }
+  .content__box__href {
+    bottom: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .intro {
+    padding-bottom: 50px;
+  }
+  .intro .intro-container {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 679px) {
+  .intro {
+    padding: 0;
+  }
+  .intro .intro-container {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .intro .pattern-container {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  .intro .pattern-container__img {
+    height: 500px;
+    background-image: url("../../starter-code/assets/image-hero-mobile@2x.png");
+    background-size: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .button {
+    padding: 14px 25px;
+    font-family: "Plus Jakarta Sans";
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .intro .intro-container {
+    padding-bottom: 30px;
+  }
+  .intro .intro-container__title {
+    margin-bottom: 15px;
+  }
+  .intro .pattern-container__img {
+    height: 350px;
+    background-image: url("../../starter-code/assets/image-hero-mobile.png");
+    background-size: auto;
+    background-position: center;
+  }
+  .content {
+    grid-template-columns: 1fr;
+    padding-top: 0;
+  }
+  .content__title {
+    padding: 20px 30px 35px 30px;
+  }
+}/*# sourceMappingURL=style.css.map */
