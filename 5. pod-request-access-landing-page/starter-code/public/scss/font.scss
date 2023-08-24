@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;700&display=swap');
 
 $font-head-s: 26px;
 $font-head-m: 48px;
@@ -8,10 +8,10 @@ $font-xs: 14px;
 $font-s: 15px;
 $font-m: 18px;
 
-@mixin font ($size){
+@mixin font ($size, $weight: 300){
     font: {
         family: 'Chivo', sans-serif;
         size: $size;
-        weight: 100;
+        weight: $weight;
     }
 }
