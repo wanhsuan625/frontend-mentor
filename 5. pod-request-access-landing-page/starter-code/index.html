@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./public/images/favicon-32x32.png">
   <link rel="stylesheet" href="./public/css/style.css">
 
   <title>Frontend Mentor | Pod request access landing page</title>
@@ -23,6 +23,7 @@
     <!-- END HEADER -->
 
     <main class="main">
+      <!-- INTRODUCTION -->
       <section class="intro">
         <h1 class="intro__title">PUBLISH YOUR PODCASTS
           <span>EVERYWHERE.</span>
@@ -33,6 +34,7 @@
         </p>
       </section>
 
+      <!-- SOCIAL LINK ICON -->
       <figure class="social-container">
         <img
           class="social-container__img"
@@ -52,14 +54,23 @@
           alt="">
       </figure>
 
-        <div class="input-container">
-          <input
-            class="input-container__input"
-            type="text"
-            placeholder="Email address">
-          <button class="input-container__button">Request Access</button>
-        </div>
+      <!-- EMAIL INPUT -->
+      <div class="input-container">
+        <input
+          class="input-container__input"
+          type="text"
+          placeholder="Email address">
+        <span 
+          class="input-container__error-message"
+          style="display: none;">
+          Oops! Please check your email
+        </span>
+        <button class="input-container__button">Request Access</button>
+      </div>
     </main>
+
+    <!-- DOT IMAGE -->
+    <div class="dot-img"></div>
 
   </div>
 </body>
