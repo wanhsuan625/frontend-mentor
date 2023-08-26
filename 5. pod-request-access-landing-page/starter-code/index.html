@@ -57,21 +57,29 @@
       <!-- EMAIL INPUT -->
       <div class="input-container">
         <input
+          id="email-input"
           class="input-container__input"
           type="text"
           placeholder="Email address">
-        <span 
-          class="input-container__error-message"
+        <span
+          id="message"
+          class="input-container__message"
           style="display: none;">
-          Oops! Please check your email
         </span>
-        <button class="input-container__button">Request Access</button>
+        <button
+          id="email-button"
+          class="input-container__button"
+          type="submit">
+         Request Access
+        </button>
       </div>
     </main>
 
     <!-- DOT IMAGE -->
     <div class="dot-img"></div>
-
   </div>
+
+  <!-- Javascript -->
+  <script src="./public/javascript/index.js"></script>
 </body>
 </html>

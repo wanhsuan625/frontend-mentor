@@ -106,7 +106,7 @@ html, body {
   box-shadow: 0 5px 10px 0 #C3C3C3;
   transform: translate(0px, 1px);
 }
-.input-container__error-message {
+.input-container__message {
   width: 100%;
   left: 20px;
   top: 5px;
