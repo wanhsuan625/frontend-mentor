@@ -128,7 +128,7 @@ html, body{
 }
 
 // TABLET
-@media screen and ( min-width : 768px ){
+@media screen and ( min-width : 480px ){
     .background{
         width: 490px;
         right: 0;
@@ -140,8 +140,8 @@ html, body{
     .main{
         width: 85%;
         background-color: $background;
-        padding: 95px 0 0 0;
-        margin: 50px 0 150px 40px;
+        padding: 80px 0 0 10px;
+        margin: 50px 0 150px 30px;
     }
     .intro{
         &__title{
@@ -163,8 +163,20 @@ html, body{
     }
     .input-container{
         width: 70%;
-        padding: 0;
         padding-bottom: 100px;
+    }
+    .dot-img{
+        height: 104px;
+        margin-left: 40px;
+        background: {
+            image: url('../images/desktop/bg-pattern-dots.svg');
+            repeat: no-repeat;
+        }
+    }
+}
+@media screen and ( min-width: 768px ){
+    .input-container{
+        padding-top: 0;
         margin-top: 35px;
         &__input{ padding: 20px;}
         &__button{
@@ -176,16 +188,30 @@ html, body{
         }
         &__button:active{ box-shadow: none;}
     }
-    .dot-img{
-        height: 104px;
-        margin-left: 40px;
-        background: {
-            image: url('../images/desktop/bg-pattern-dots.svg');
-            repeat: no-repeat;
-        }
-    }
 }
 // DESKTOP
 @media screen and ( min-width: 1024px ){
-    
+    .background{ margin-top: 130px;}
+    .header{ padding-top: 100px;}
+    .main{ max-width: 720px;}
+}
+
+@media screen and ( min-width: 1200px ){
+    .background{
+        width: 100%;
+        right: 0;
+        background: {
+            position: right top;
+        }
+    }
+    .header{ padding-left: 100px;}
+    .main{
+        margin-left: 90px;
+        margin-bottom: 100px;
+    }
+    .dot-img{
+        margin: 0;
+        background-position: right;
+        top: -155px;
+    }
 }
