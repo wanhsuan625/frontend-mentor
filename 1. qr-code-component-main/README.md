@@ -11,8 +11,6 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
   - [Built with](#built-with)
 - [Contact](#contact)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### Screenshot
@@ -21,8 +19,9 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Links
 
-- Solution URL : [https://github.com/wanhsuan625/frontend-mentor/tree/main/qr-code-component-main](https://github.com/wanhsuan625/frontend-mentor/tree/main/qr-code-component-main)
-- Live Site URL : [https://wanhsuan625.github.io/frontend-mentor/qr-code-component-main/index.html](https://wanhsuan625.github.io/frontend-mentor/qr-code-component-main/index.html)
+- Live Site URL : [https://wanhsuan625.github.io/frontend-mentor/1.%20qr-code-component-main/index.html](https://wanhsuan625.github.io/frontend-mentor/1.%20qr-code-component-main/index.html?_blank)
+- Solution URL : [https://github.com/wanhsuan625/frontend-mentor/tree/main/qr-code-component-main](https://github.com/wanhsuan625/frontend-mentor/tree/main/qr-code-component-main?_blank)
+
 
 ## My process
 

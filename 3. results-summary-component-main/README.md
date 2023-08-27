@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://wanhsuan625.github.io/frontend-mentor/results-summary-component-main/index.html](https://wanhsuan625.github.io/frontend-mentor/results-summary-component-main/index.html)
-- Solution URL: [https://wanhsuan625.github.io/frontend-mentor/results-summary-component-main/index.html](https://wanhsuan625.github.io/frontend-mentor/results-summary-component-main/index.html)
+- Live Site URL: [https://wanhsuan625.github.io/frontend-mentor/3.%20results-summary-component-main/index.html](https://wanhsuan625.github.io/frontend-mentor/3.%20results-summary-component-main/index.html?_blank)
+- Solution URL: [https://wanhsuan625.github.io/frontend-mentor/results-summary-component-main/index.html](https://wanhsuan625.github.io/frontend-mentor/results-summary-component-main/index.html?_blank)
 
 ## My process
 

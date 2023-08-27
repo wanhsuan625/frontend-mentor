@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://wanhsuan625.github.io/frontend-mentor/skilled-elearning-landing-page/starter-code/index.html](https://wanhsuan625.github.io/frontend-mentor/skilled-elearning-landing-page/starter-code/index.html?_blank)
+- Live Site URL: [https://wanhsuan625.github.io/frontend-mentor/4.%20skilled-elearning-landing-page/starter-code/index.html](https://wanhsuan625.github.io/frontend-mentor/4.%20skilled-elearning-landing-page/starter-code/index.html?_blank)
 - Solution URL: [https://github.com/wanhsuan625/frontend-mentor/tree/main/skilled-elearning-landing-page](https://github.com/wanhsuan625/frontend-mentor/tree/main/skilled-elearning-landing-page?_blank)
 
 ## My process
