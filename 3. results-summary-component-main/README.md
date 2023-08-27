@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Live Site URL: [https://wanhsuan625.github.io/frontend-mentor/3.%20results-summary-component-main/index.html](https://wanhsuan625.github.io/frontend-mentor/3.%20results-summary-component-main/index.html?_blank)
-- Solution URL: [https://wanhsuan625.github.io/frontend-mentor/results-summary-component-main/index.html](https://wanhsuan625.github.io/frontend-mentor/results-summary-component-main/index.html?_blank)
+- Solution URL: [https://github.com/wanhsuan625/frontend-mentor/tree/main/3.%20results-summary-component-main](https://github.com/wanhsuan625/frontend-mentor/tree/main/3.%20results-summary-component-main?_blank)
 
 ## My process
 

@@ -28,7 +28,7 @@ Users should be able to:
 ### Links
 
 - Live Site URL: [https://wanhsuan625.github.io/frontend-mentor/2.%20product-preview-card-component-main/index.html](https://wanhsuan625.github.io/frontend-mentor/2.%20product-preview-card-component-main/index.html?_blank)
-- Solution URL: [https://github.com/wanhsuan625/frontend-mentor/tree/main/product-preview-card-component-main](https://github.com/wanhsuan625/frontend-mentor/tree/main/product-preview-card-component-main?_blank)
+- Solution URL: [https://github.com/wanhsuan625/frontend-mentor/tree/main/2.%20product-preview-card-component-main](https://github.com/wanhsuan625/frontend-mentor/tree/main/2.%20product-preview-card-component-main?_blank)
 
 ## My process
 
