@@ -1,0 +1,113 @@
+@import 'color.scss';
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    position: relative;
+    box-sizing: border-box;
+}
+html, body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+details{ border-bottom: 1px solid $divider; }
+summary{ list-style: none; }
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin image( $url ){
+    background: {
+        image: $url;
+        repeat: no-repeat;
+        size: contain;
+    }
+}
+
+.wrapper{
+    min-height: 100vh;
+    background: linear-gradient( $background_top , $background_bottom );
+    overflow: auto;
+}
+.main{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 150px;
+    background-color: $white;
+    border-radius: 23px;
+}
+
+// FIGURE
+.figure{
+    margin: 0 50px;
+    top: -107px;
+
+    &__woman{
+        width: 100%;
+        padding-top: 75%;
+        @include image(url('../images/illustration-woman-online-mobile.svg'));
+    }
+    &__woman::before{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 150px;
+        @include image(url('../images/bg-pattern-mobile.svg'));
+        position: absolute;
+        top: 55%;
+    }
+}
+
+// QUESTION
+.text{
+    width: 100%;
+    text-align: center;
+    margin-top: -70px;
+    padding: 0px 20px 50px 20px;
+    font: {
+        family: 'Kumbh Sans', sans-serif;
+        size: 12px;
+        weight: 400;
+    }
+
+    &__title{
+        margin: 0;
+        padding-bottom: 20px;
+        color: $primary_dark;
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .question-box{
+        width: 100%;
+        text-align: left;
+
+        &__topic{
+            font-size: 13px;
+            color: $primary;
+            cursor: pointer;
+            padding: 12px 5px;
+            @include flex-center;
+            justify-content: space-between;
+
+            &--hover:hover{ color: $secondary; }
+        }
+        &__arrow{ height: 7px;}
+        &__answer{
+            margin: 0;
+            padding: 0 25px 10px 5px;
+            color: $primary_light;
+        }
+
+        // UNFOLD QUESTIONS 
+        &[open] summary{
+            color: #000000;
+            font-weight: 700;
+        }
+        &[open] summary img{
+            transform: rotate(180deg);
+        }
+    }
+}

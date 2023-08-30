@@ -4,37 +4,94 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./public/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./public/css/style.css">
   
   <title>Frontend Mentor | FAQ Accordion Card</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-  How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on 
-  team members for the Premium plan.
+  <div class="wrapper">
+    <main class="main">
+      <!-- IMGAGE -->
+      <figure class="figure">
+        <div class="figure__woman"></div>
+      </figure>
+      <!-- END IMGAGE -->
 
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
+      <!-- QUESTION AREA -->
+      <section class="text">
+        <h1 class="text__title">FAQ</h1>
+        <details class="question-box">
+          <summary class="question-box__topic question-box__topic--hover">
+            How many team members can I invite?
+            <img
+              class="question-box__arrow"
+              src="./public/images/icon-arrow-down.svg"
+              alt="">
+          </summary>
+          <p class="question-box__answer">
+            You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.
+          </p>
+        </details>
 
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
+        <details class="question-box">
+          <summary class="question-box__topic question-box__topic--hover">
+            What is the maximum file upload size?
+            <img
+              class="question-box__arrow"
+              src="./public/images/icon-arrow-down.svg"
+              alt="">
+          </summary>
+          <p class="question-box__answer">
+            No more than 2GB. All files in your account must fit your allotted storage space.
+          </p>
+        </details>
+        
+        <details class="question-box">
+          <summary class="question-box__topic question-box__topic--hover">
+            How do I reset my password?
+            <img
+              class="question-box__arrow"
+              src="./public/images/icon-arrow-down.svg"
+              alt="">
+          </summary>
+          <p class="question-box__answer">
+            Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.
+          </p>
+        </details>
 
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
+        <details class="question-box">
+          <summary class="question-box__topic question-box__topic--hover">
+            Can I cancel my subscription?
+            <img
+              class="question-box__arrow"
+              src="./public/images/icon-arrow-down.svg"
+              alt="">
+          </summary>
+          <p class="question-box__answer">
+            Yes! Send us a message and we’ll process your request no questions asked.
+          </p>
+        </details>
 
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours.
+        <details class="question-box">
+          <summary class="question-box__topic question-box__topic--hover">
+            Do you provide additional support?
+            <img
+              class="question-box__arrow"
+              src="./public/images/icon-arrow-down.svg"
+              alt="">
+          </summary>
+          <p class="question-box__answer">
+            Chat and email support is available 24/7. Phone lines are open during normal business hours. -->
+          </p>
+        </details>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+      </section>
+      <!-- END QUESTION AREA -->
+
+    </main>
   </div>
+
+  <script src="./public/toggle.js"></script>
 </body>
 </html>
