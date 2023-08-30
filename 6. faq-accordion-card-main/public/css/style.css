@@ -8,6 +8,7 @@ html, body {
   padding: 0;
   margin: 0;
   height: 100%;
+  z-index: -99;
 }
 
 details {
@@ -22,6 +23,7 @@ summary {
   min-height: 100vh;
   background: linear-gradient(#B068E9, #6463E7);
   overflow: auto;
+  z-index: -3;
 }
 
 .main {
@@ -30,6 +32,7 @@ summary {
   margin-top: 150px;
   background-color: #FFFFFF;
   border-radius: 23px;
+  z-index: -2;
 }
 
 .figure {
@@ -53,6 +56,7 @@ summary {
   background-size: contain;
   position: absolute;
   top: 55%;
+  z-index: -1;
 }
 
 .text {
@@ -79,7 +83,7 @@ summary {
   font-size: 13px;
   color: hsl(237, 12%, 33%);
   cursor: pointer;
-  padding: 12px 5px;
+  padding: 18px 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,7 +97,7 @@ summary {
 }
 .text .question-box__answer {
   margin: 0;
-  padding: 0 25px 10px 5px;
+  padding: 0 25px 12px 5px;
   color: hsl(240, 6%, 50%);
 }
 .text .question-box[open] summary {
@@ -102,4 +106,78 @@ summary {
 }
 .text .question-box[open] summary img {
   transform: rotate(180deg);
+}
+
+@media screen and (min-width: 480px) {
+  .main {
+    width: 435px;
+  }
+  .text .question-box__topic {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main {
+    width: 920px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .figure {
+    width: 50%;
+    top: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  .figure__woman {
+    background-image: url("../images/illustration-woman-online-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 20%;
+    right: 15%;
+  }
+  .figure__woman::before {
+    width: 965px;
+    height: 945px;
+    background-image: url("../images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: 0;
+    top: -110%;
+  }
+  .figure__box {
+    width: 150px;
+    height: 150px;
+    background-image: url("../images/illustration-box-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: -73px;
+    top: 230px;
+    animation: jump 1.3s infinite ease-in-out;
+  }
+  @keyframes jump {
+    0% {
+      top: 230px;
+    }
+    50% {
+      top: 200px;
+    }
+    100% {
+      top: 230px;
+    }
+  }
+  .text {
+    width: 50%;
+    margin: 0;
+    padding: 50px 100px 100px 0;
+  }
+  .text__title {
+    text-align: left;
+  }
 }/*# sourceMappingURL=style.css.map */

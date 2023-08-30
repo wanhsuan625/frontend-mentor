@@ -9,6 +9,7 @@ html, body{
     padding: 0;
     margin: 0;
     height: 100%;
+    z-index: -99;
 }
 details{ border-bottom: 1px solid $divider; }
 summary{ list-style: none; }
@@ -30,6 +31,7 @@ summary{ list-style: none; }
     min-height: 100vh;
     background: linear-gradient( $background_top , $background_bottom );
     overflow: auto;
+    z-index: -3;
 }
 .main{
     width: 90%;
@@ -37,6 +39,7 @@ summary{ list-style: none; }
     margin-top: 150px;
     background-color: $white;
     border-radius: 23px;
+    z-index: -2;
 }
 
 // FIGURE
@@ -57,6 +60,7 @@ summary{ list-style: none; }
         @include image(url('../images/bg-pattern-mobile.svg'));
         position: absolute;
         top: 55%;
+        z-index: -1;
     }
 }
 
@@ -88,7 +92,7 @@ summary{ list-style: none; }
             font-size: 13px;
             color: $primary;
             cursor: pointer;
-            padding: 12px 5px;
+            padding: 18px 5px;
             @include flex-center;
             justify-content: space-between;
 
@@ -97,7 +101,7 @@ summary{ list-style: none; }
         &__arrow{ height: 7px;}
         &__answer{
             margin: 0;
-            padding: 0 25px 10px 5px;
+            padding: 0 25px 12px 5px;
             color: $primary_light;
         }
 
@@ -108,6 +112,72 @@ summary{ list-style: none; }
         }
         &[open] summary img{
             transform: rotate(180deg);
+        }
+    }
+}
+
+// TABLET
+@media screen and ( min-width: 480px ){
+    .main{ width: 435px;}
+    .text{
+        .question-box{
+            &__topic{ font-size: 14px; }
+        }
+    }
+}
+
+// DESKTOP
+@media screen and ( min-width: 1024px){
+    .wrapper{
+        @include flex-center;
+    }
+    .main{
+        width: 920px;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    .figure{
+        width: 50%;
+        top: 0;
+        margin: 0;
+        overflow: hidden;
+
+        &__woman{
+            @include image(url('../images/illustration-woman-online-desktop.svg'));
+            top: 20%;
+            right: 15%;
+        }
+        &__woman::before{
+            width: 965px;
+            height: 945px;
+            @include image(url('../images/bg-pattern-desktop.svg'));
+            right: 0;
+            top: -110%;
+        }
+        &__box{
+            width: 150px;
+            height: 150px;
+            @include image(url('../images/illustration-box-desktop.svg'));
+            position: absolute;
+            left: -73px;
+            top: 230px;
+            animation: jump 1.3s infinite ease-in-out;
+        }
+    }
+    @keyframes jump {
+        0%{ top: 230px; }
+        50%{ top: 200px;}
+        100%{ top: 230px;}
+    }
+
+    .text{
+        width: 50%;
+        margin: 0;
+        padding: 50px 100px 100px 0;
+
+        &__title{
+            text-align: left;
         }
     }
 }
