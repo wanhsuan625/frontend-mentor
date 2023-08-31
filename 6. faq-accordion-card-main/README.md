@@ -13,7 +13,6 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
   - [What I learned](#what-i-learned)
   - [Useful resources](#useful-resources)
 - [Contact](#contact)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
