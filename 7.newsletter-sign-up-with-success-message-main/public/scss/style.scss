@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import 'color.scss';
+
+*{
+    position: relative;
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 10px;
+}
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    background-color: $white;
+    min-height: 100vh;
+}
+.main{
+    width: 100%;
+    background-color: white;
+
+    &-background{
+        position: absolute;
+        width: 100%;
+        padding-top: 75%;
+        background: {
+            image: url('../images/illustration-sign-up-mobile.svg');
+            repeat: no-repeat;
+            size: contain;
+        }
+    }
+}
+
+.illustrate{
+    padding: 0 24px;
+    margin: 40px auto;        
+    font: {
+        family: 'Roboto', sans-serif;
+        size: 1.6rem;
+        weight: 400;
+    }
+    
+    // INTRODUCTION AREA
+    .intro{
+         &__item{
+            padding-top: 10px;
+
+            .item-box{
+                padding-bottom: 15px;
+                display: flex;
+                align-items: start;
+                
+                &__img{ margin-right: 15px; }
+                &__text{
+                    margin: 0;
+                    line-height: 2.1rem;
+                }
+            }
+        }
+    }
+
+    // EMAIL AREA
+    .email{
+        &-container{ padding-top: 10px; }
+        &__title{
+            margin: 0;
+            font-size: 1.4rem;
+            font-weight: 700;
+
+            .email__message{
+                color: $primary;
+                position: absolute;
+                right: 0;
+            }
+        }
+        &__input{
+            cursor: pointer;
+            width: 100%;
+            border: 1px solid $secondary_light;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 8px 0 24px 0;
+        }
+        &__button{
+            cursor: pointer;
+            width: 100%;
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 1.4rem;
+            color: $white;
+            background-color: $secondary;
+            border: 0;
+
+            &--hover:hover{
+                background: linear-gradient( $primary , $neutral );
+                box-shadow: 0px 10px 30px -4px $primary;
+            }
+        }
+    }
+}

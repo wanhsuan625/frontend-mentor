@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 10px;
+}
+
+.wrapper {
+  background-color: hsl(0, 0%, 100%);
+  min-height: 100vh;
+}
+
+.main {
+  width: 100%;
+  background-color: white;
+}
+.main-background {
+  position: absolute;
+  width: 100%;
+  padding-top: 75%;
+  background-image: url("../images/illustration-sign-up-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.illustrate {
+  padding: 0 24px;
+  margin: 40px auto;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.illustrate .intro__item {
+  padding-top: 10px;
+}
+.illustrate .intro__item .item-box {
+  padding-bottom: 15px;
+  display: flex;
+  align-items: start;
+}
+.illustrate .intro__item .item-box__img {
+  margin-right: 15px;
+}
+.illustrate .intro__item .item-box__text {
+  margin: 0;
+  line-height: 2.1rem;
+}
+.illustrate .email-container {
+  padding-top: 10px;
+}
+.illustrate .email__title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.illustrate .email__title .email__message {
+  color: hsl(4, 100%, 67%);
+  position: absolute;
+  right: 0;
+}
+.illustrate .email__input {
+  cursor: pointer;
+  width: 100%;
+  border: 1px solid hsl(231, 7%, 60%);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px 0 24px 0;
+}
+.illustrate .email__button {
+  cursor: pointer;
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(234, 29%, 20%);
+  border: 0;
+}
+.illustrate .email__button--hover:hover {
+  background: linear-gradient(hsl(4, 100%, 67%), hsl(346, 100%, 66%));
+  box-shadow: 0px 10px 30px -4px hsl(4, 100%, 67%);
+}/*# sourceMappingURL=style.css.map */
