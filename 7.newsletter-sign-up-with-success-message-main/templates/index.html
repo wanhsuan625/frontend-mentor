@@ -11,7 +11,11 @@
 </head>
 <body>
   <div class="wrapper">
-    <main class="main main-background">
+    <main class="main">
+      <!-- BACKGROUND IMAGE -->
+      <figure class="figure" id="figure"></figure>
+      <!-- END BACKGROUND IMAGE -->
+
       <div class="illustrate">
         <!-- INTRODUCTION -->
         <div class="intro intro-container">
@@ -39,7 +43,9 @@
         <!-- EMAIL -->
         <div class="email-container">
           <p class="email__title">Email address
-            <span class="email__message">Valid email required</span>
+            <span class="email__message" id="email-message" style="display: none">
+              Valid email required
+            </span>
           </p>
           <input 
             class="email__input"
@@ -53,6 +59,8 @@
     </main>
   </div>
 
+  <script src="../public/javascript/index.js"></script>
+  
   <!-- Sign-up form start -->
 
   <!-- Stay updated!

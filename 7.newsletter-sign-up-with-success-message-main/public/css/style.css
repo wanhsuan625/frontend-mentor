@@ -20,21 +20,23 @@ html, body {
   width: 100%;
   background-color: white;
 }
-.main-background {
-  position: absolute;
+.main .figure {
+  margin: 0;
+}
+.main .figure__img {
   width: 100%;
-  padding-top: 75%;
-  background-image: url("../images/illustration-sign-up-mobile.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
+  object-fit: cover;
 }
 
 .illustrate {
-  padding: 0 24px;
-  margin: 40px auto;
+  padding: 40px 24px;
+  margin: 0 auto;
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
+}
+.illustrate .intro__title {
+  margin-top: 0;
 }
 .illustrate .intro__item {
   padding-top: 10px;
@@ -72,6 +74,9 @@ html, body {
   padding: 16px;
   margin: 8px 0 24px 0;
 }
+.illustrate .email__input:focus-visible {
+  outline: 1px solid hsl(234, 29%, 20%);
+}
 .illustrate .email__button {
   cursor: pointer;
   width: 100%;
@@ -85,4 +90,44 @@ html, body {
 .illustrate .email__button--hover:hover {
   background: linear-gradient(hsl(4, 100%, 67%), hsl(346, 100%, 66%));
   box-shadow: 0px 10px 30px -4px hsl(4, 100%, 67%);
+}
+
+@media screen and (min-width: 576px) {
+  .illustrate {
+    padding: 40px;
+  }
+  .figure__img {
+    height: 425px;
+    border-radius: 0 0 20px 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(235, 18%, 26%);
+  }
+  .main {
+    width: 928px;
+    border-radius: 36px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .figure {
+    width: 50%;
+  }
+  .figure__img {
+    height: 100%;
+    border-radius: 20px;
+    object-position: center;
+  }
+  .illustrate {
+    padding-top: 70px;
+    padding-right: 70px;
+  }
+  .illustrate .intro__title {
+    font-size: 56px;
+  }
 }/*# sourceMappingURL=style.css.map */

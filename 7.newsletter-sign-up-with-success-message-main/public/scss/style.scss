@@ -25,21 +25,19 @@ html, body{
     width: 100%;
     background-color: white;
 
-    &-background{
-        position: absolute;
-        width: 100%;
-        padding-top: 75%;
-        background: {
-            image: url('../images/illustration-sign-up-mobile.svg');
-            repeat: no-repeat;
-            size: contain;
+    .figure{
+        margin: 0;
+
+        &__img{
+            width: 100%;
+            object-fit: cover;
         }
     }
 }
 
 .illustrate{
-    padding: 0 24px;
-    margin: 40px auto;        
+    padding: 40px 24px;
+    margin: 0 auto;        
     font: {
         family: 'Roboto', sans-serif;
         size: 1.6rem;
@@ -48,7 +46,8 @@ html, body{
     
     // INTRODUCTION AREA
     .intro{
-         &__item{
+        &__title{ margin-top: 0; }
+        &__item{
             padding-top: 10px;
 
             .item-box{
@@ -86,6 +85,10 @@ html, body{
             border-radius: 8px;
             padding: 16px;
             margin: 8px 0 24px 0;
+
+            &:focus-visible{
+                outline: 1px solid $secondary;
+            }
         }
         &__button{
             cursor: pointer;
@@ -100,6 +103,53 @@ html, body{
             &--hover:hover{
                 background: linear-gradient( $primary , $neutral );
                 box-shadow: 0px 10px 30px -4px $primary;
+            }
+        }
+    }
+}
+
+
+// --- RWD ------------------------------
+// TABLET
+@media screen and ( min-width : 576px ){
+    .illustrate{ padding: 40px; }
+    .figure{
+        &__img{
+            height: 425px;
+            border-radius: 0 0 20px 20px;
+        }
+    }
+}
+
+// DESKTOP
+@media screen and ( min-width: 992px){
+    .wrapper{
+        @include flex-center();
+        background-color: $background;
+    }
+    .main{
+        width: 928px;
+        border-radius: 36px;
+        padding: 20px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .figure{
+        width: 50%;
+        
+        &__img{
+            height: 100%;
+            border-radius: 20px;
+            object-position: center;
+        }
+    }
+    .illustrate{
+        padding-top: 70px;
+        padding-right: 70px;
+
+        .intro{
+            &__title{
+                font-size: 56px;
             }
         }
     }
