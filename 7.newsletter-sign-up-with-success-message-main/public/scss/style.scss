@@ -61,6 +61,11 @@
                 outline: 1px solid $secondary;
             }
         }
+        &__invalid{
+            color: $primary;
+            border: 1px solid $primary;
+            background-color: $primary_opacity;
+        }
     }
 }
 
