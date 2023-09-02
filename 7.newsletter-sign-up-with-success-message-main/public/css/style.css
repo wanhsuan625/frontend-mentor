@@ -19,11 +19,33 @@ html, body {
 .main {
   width: 100%;
   background-color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
-.main .figure {
+
+.button {
+  cursor: pointer;
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(234, 29%, 20%);
+  border: 0;
+}
+.button--hover:hover {
+  background: linear-gradient(hsl(4, 100%, 67%), hsl(346, 100%, 66%));
+  box-shadow: 0px 10px 30px -4px hsl(4, 100%, 67%);
+}
+.button--active:active {
+  transform: translateY(1px);
+}
+
+.figure {
   margin: 0;
 }
-.main .figure__img {
+.figure__img {
   width: 100%;
   object-fit: cover;
 }
@@ -31,9 +53,6 @@ html, body {
 .illustrate {
   padding: 40px 24px;
   margin: 0 auto;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.6rem;
-  font-weight: 400;
 }
 .illustrate .intro__title {
   margin-top: 0;
@@ -76,20 +95,6 @@ html, body {
 }
 .illustrate .email__input:focus-visible {
   outline: 1px solid hsl(234, 29%, 20%);
-}
-.illustrate .email__button {
-  cursor: pointer;
-  width: 100%;
-  padding: 16px;
-  border-radius: 8px;
-  font-size: 1.4rem;
-  color: hsl(0, 0%, 100%);
-  background-color: hsl(234, 29%, 20%);
-  border: 0;
-}
-.illustrate .email__button--hover:hover {
-  background: linear-gradient(hsl(4, 100%, 67%), hsl(346, 100%, 66%));
-  box-shadow: 0px 10px 30px -4px hsl(4, 100%, 67%);
 }
 
 @media screen and (min-width: 576px) {
