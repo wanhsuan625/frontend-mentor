@@ -1,8 +1,12 @@
+const main = document.querySelector(".main");
 const figure = document.querySelector("#figure");
 const email_input = document.querySelector("#email-input");
 const email_button = document.querySelector("#email-button");
 const email_message = document.querySelector('#email-message');
 const email_regex = new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$");
+const email_submit = document.querySelector("#email-submit");
+const thank_button = document.querySelector("#thank-button");
+const success_container = document.querySelector("#success-container");
 
 // refresh page , input set empty value - Firefox 
 document.addEventListener( "DOMContentLoaded", () => {
@@ -11,10 +15,10 @@ document.addEventListener( "DOMContentLoaded", () => {
 
 let img_device_set = () => {
     if( window.innerWidth > 991){
-        figure_img.src = "../public/images/illustration-sign-up-desktop.svg";
+        figure_img.src = "./public/images/illustration-sign-up-desktop.svg";
         return;
     }
-    figure_img.src = "../public/images/illustration-sign-up-mobile.svg";
+    figure_img.src = "./public/images/illustration-sign-up-mobile.svg";
 }
 
 let email_check_valid = ( text ) => {
@@ -48,15 +52,25 @@ email_button.addEventListener( "click" , () => {
         email_check_valid("Valid email required");
         return;
     }
+    // give email to thank you page
     console.log(email_value);
+    email_submit.textContent = email_value;
+    main.style.display = "none";
+    success_container.style.display = "block";
 })
 
 // recover email input css after error message
 email_input.addEventListener( "focus" , () => {
-    console.log("hehe");
     if ( email_input.classList.contains( "email__invalid" ) ){
         email_message.style.display = "none";
         email_input.classList.remove( "email__invalid" );
         return;
     }
+})
+
+// 
+thank_button.addEventListener( "click" , () => {
+    main.style.display = "flex";
+    success_container.style.display = "none";
+    email_input.value = "";
 })

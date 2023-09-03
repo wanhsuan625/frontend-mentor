@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="./public/css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./public/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+<body>
+  <div class="wrapper">
+    <main class="main" >
+      <!-- BACKGROUND IMAGE -->
+      <figure class="figure" id="figure"></figure>
+      <!-- END BACKGROUND IMAGE -->
+
+      <div class="illustrate">
+        <!-- INTRODUCTION -->
+        <div class="intro intro-container">
+          <h1 class="intro__title">Stay updated!</h1>
+          <p class="intro__description">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <div class="intro__item">
+            <div class="item-box">
+              <img class="item-box__img" src="./public/images/icon-list.svg" alt="">
+              <p class="item-box__text">Product discovery and building what matters</p>
+            </div>
+            <div class="item-box">
+              <img class="item-box__img" src="./public/images/icon-list.svg" alt="">
+              <p class="item-box__text">Measuring to ensure updates are a success</p>
+            </div>
+            <div class="item-box">
+              <img class="item-box__img" src="./public/images/icon-list.svg" alt="">
+              <p class="item-box__text">And much more!</p>
+            </div>
+          </div>
+        </div>
+        <!-- END INTRODUCTION -->
+
+        <!-- EMAIL -->
+        <div class="email-container">
+          <p class="email__title">Email address
+            <span class="email__message" id="email-message" style="display: none">
+              Valid email required
+            </span>
+          </p>
+          <input 
+            value=""
+            class="email__input"
+            id="email-input"
+            type="text"
+            placeholder="email@company.com">
+          <button
+            type="submit"
+            id="email-button"
+            class="email__button button button--hover button--active">
+              Subscribe to monthly newsletters
+          </button>
+        </div>
+        <!-- END EMAIL -->
+      </div>
+    </main>
+
+    <!-- SUCCESS -->
+    <div class="success success-container" id="success-container" style="display: none;">
+      <section class="thank thank-container">
+        <img
+          class="thank__icon"
+          src="./public/images/icon-success.svg"
+          alt="">
+        <h1 class="thank__title">Thanks for subscribing!</h1>
+        <p class="thank__description">
+            A confirmation email has been sent to <span id="email-submit"></span>.
+            Please open it and click the button inside to confirm your subscription.
+        </p>
+      </section>
+      <button 
+        id="thank-button"
+        class="thank__button button button--hover button--active">
+          Dismiss message
+      </button>
+    </div>
+    <!-- END SUCCESS -->
+
+  </div>
+
+  <script src="./public/javascript/main.js"></script>  
+</body>
+</html>
