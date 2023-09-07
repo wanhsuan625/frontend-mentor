@@ -248,7 +248,28 @@ html, body{
                 grid-column: 3/5;
             }
         }
-        
+        .intro{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .photo-box{
+                width: 364px;
+                margin: 0;
+                left: -12%;
+            }
+            .content-box{
+                width: 47%;
+                text-align: left;
+                &__title{
+                    padding: 0;
+                    font-size: $font-head-s;
+                }
+                &__description{
+                    font-size: $font-m;
+                }
+            }
+        }
         .booking{
             margin: 120px 0 22px 0;
             padding: 56px 0 64px 0;
@@ -268,6 +289,10 @@ html, body{
 // DESKTOP
 @media screen and ( min-width : 992px ){
     .main{
+        .headline{
+            &__title{ font-size: $font-head-l; }
+            &__description{ width: 700px;}
+        }
         .banner{
             grid-template-columns: 2fr 1fr 1fr 2fr;
             grid-template-rows: 182px 158px;
@@ -296,5 +321,46 @@ html, body{
                 grid-row: 2/3;
             }
         }
+        .intro{
+            justify-content: space-between;
+            .photo-box{
+                width: 445px;
+                left: 0;
+            }
+        }
+        
+        .booking{
+            width: 100%;
+            padding: 80px 65px;
+            margin: 88px 0 56px 0;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+
+            .text-box{
+                width: 55%;
+                
+                &__title{
+                    font-size: $font-head-m;
+                }
+                
+                &__description{
+                    width: 100%;
+                    margin: 0;
+                    margin-top: 25px;
+                }
+            }
+
+            &__button{
+                height: 44px;
+                align-self: center;
+            }
+        }
+    }
+}
+
+@media screen and ( min-width: 1200px ){
+    .header, .main, .footer{
+        width: 1110px;
     }
 }

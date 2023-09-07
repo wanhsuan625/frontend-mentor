@@ -221,6 +221,27 @@ html, body {
   .main .banner .img-motion-graphics {
     grid-column: 3/5;
   }
+  .main .intro {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .main .intro .photo-box {
+    width: 364px;
+    margin: 0;
+    left: -12%;
+  }
+  .main .intro .content-box {
+    width: 47%;
+    text-align: left;
+  }
+  .main .intro .content-box__title {
+    padding: 0;
+    font-size: 32px;
+  }
+  .main .intro .content-box__description {
+    font-size: 18px;
+  }
   .main .booking {
     margin: 120px 0 22px 0;
     padding: 56px 0 64px 0;
@@ -233,6 +254,12 @@ html, body {
   }
 }
 @media screen and (min-width: 992px) {
+  .main .headline__title {
+    font-size: 56px;
+  }
+  .main .headline__description {
+    width: 700px;
+  }
   .main .banner {
     grid-template-columns: 2fr 1fr 1fr 2fr;
     grid-template-rows: 182px 158px;
@@ -259,5 +286,40 @@ html, body {
   .main .banner .img-motion-graphics {
     grid-column: 4/5;
     grid-row: 2/3;
+  }
+  .main .intro {
+    justify-content: space-between;
+  }
+  .main .intro .photo-box {
+    width: 445px;
+    left: 0;
+  }
+  .main .booking {
+    width: 100%;
+    padding: 80px 65px;
+    margin: 88px 0 56px 0;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+  .main .booking .text-box {
+    width: 55%;
+  }
+  .main .booking .text-box__title {
+    font-size: 44px;
+  }
+  .main .booking .text-box__description {
+    width: 100%;
+    margin: 0;
+    margin-top: 25px;
+  }
+  .main .booking__button {
+    height: 44px;
+    align-self: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header, .main, .footer {
+    width: 1110px;
   }
 }/*# sourceMappingURL=style.css.map */
