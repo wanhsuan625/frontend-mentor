@@ -4,7 +4,7 @@ const swiper = new Swiper('.swiper', {
     slidesPerView: 'auto',
     centeredSlides: true,
     spaceBetween: 15,
-    loop: true,
+    // loop: true,
     initialSlide: 2,
     
     keyboard: {
