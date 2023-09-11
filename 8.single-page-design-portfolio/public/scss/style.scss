@@ -14,7 +14,6 @@ html, body{
 .wrapper{
     min-height: 100vh;
     background-color: $background;
-    overflow: hidden;
 }
 
 // --- FLEX CENTER LAYOUT ---
@@ -62,7 +61,7 @@ html, body{
 
 .main{
     width: 90%;
-    padding: 16px 0;
+    padding-top: 16px;
     margin: 0 auto;
 
     // HEADLINE BLOCK
@@ -92,7 +91,7 @@ html, body{
         grid-template-rows: 364px 182px 158px 182px 182px;
         grid-gap: 24px;
 
-        &__img-box{
+        &__img-container{
             border-radius: 8px;
             padding: 24px;
 
@@ -165,76 +164,79 @@ html, body{
                 }
             }
         }
+    }    
+}
+
+// CAROUSEL BLOCK
+.carousel{
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+
+    &__title{
+        @include font( $font-l , 700 );
+        margin-bottom: 32px;
     }
 
-    // SLIDE BLOCK
-    .slide{
-        text-align: center;
+    &__img-container{
+        display: flex;
+        height: 180px;
 
-        &__title{
-            @include font( $font-l , 700 );
-            margin-bottom: 32px;
+        .carousel-img{
+            border-radius: 10px;
+            height: auto;
+            max-width: 100%;
         }
-
-        &__img-box{
-            max-width: 100vw;
-            display: grid;
-            grid-template: 180px / repeat( 5 , 270px ) ;
-            grid-gap: 15px;
-            justify-content: center;
-
-            .slide-img{
-                height: 100%;
-                border-radius: 10px;
-                }
-            }
-        
-
-        &__arrow{
-            background-color: $black;
+    }
+    
+    .arrow-box{
+        .arrow{
             border-radius: 50%;
+            background-color: $black;
             padding: 24px;
             margin-top: 32px;
             cursor: pointer;
-        
+
             &--hover:hover{
                 background-color: $purple;
             }
-            &:last-child{
-                margin-left: 16px;
+
+            &:first-child{
+                margin-right: 16px;
             }
         }
     }
+}
 
-    // BOOKING BLOCK
-    .booking{
-        margin: 100px 0 24px 0;
-        padding: 48px 24px;
-        border-radius: 10px;
-        background-color: $black;
-        text-align: center;
+// BOOKING BLOCK
+.booking{
+    width: 90%;
+    margin: 100px auto 24px auto;
+    padding: 48px 24px;
+    border-radius: 10px;
+    background-color: $black;
+    text-align: center;
 
-        .text-box{
-            color: $white;
+    .text-box{
+        color: $white;
 
-            &__title{
-                margin: 0;
-                @include font( $font-head-xs , 700 );
-            }
-            &__description{
-                margin: 24px 0;
-                @include font( $font-s , 400 );
-                line-height: 26px;
-            }
+        &__title{
+            margin: 0;
+            @include font( $font-head-xs , 700 );
         }
+        &__description{
+            margin: 24px 0;
+            @include font( $font-s , 400 );
+            line-height: 26px;
+        }
+    }
 
-        &__button{
-            @extend %button;
-            background-color: $red;
+    &__button{
+        @extend %button;
+        background-color: $red;
 
-            &--hover:hover{
-                background-color: $orange;
-            }
+        &--hover:hover{
+            background-color: $orange;
         }
     }
 }
@@ -309,27 +311,30 @@ html, body{
                 }
             }
         }
-        .slide{
-            &__img-box{
-                grid-template: 360px / repeat( 5 , 540px ) ;
-                grid-gap: 30px;    
-            }
+    }
+    .carousel{
+        &__title{
+            font-size: 32px;
         }
-        .booking{
-            margin: 120px 0 22px 0;
-            padding: 56px 0 64px 0;
-            
-            .text-box{
-                &__description{
-                    width: 78%;
-                    margin: 26px auto;
-                    font-size: 18px;
-                    line-height: 28px;
-                }
+        &__img-container{
+            height: 360px;
+        }
+    }
+    .booking{
+        margin: 120px auto 22px auto;
+        padding: 56px 24px 64px 24px;
+        
+        .text-box{
+            &__description{
+                width: 78%;
+                margin: 26px auto;
+                font-size: 18px;
+                line-height: 28px;
             }
         }
     }
 }
+
 
 // DESKTOP
 @media screen and ( min-width : 992px ){
@@ -373,39 +378,38 @@ html, body{
                 left: 0;
             }
         }
-        
-        .booking{
-            width: 100%;
-            padding: 80px 65px;
-            margin: 88px 0 56px 0;
-            text-align: left;
-            display: flex;
-            justify-content: space-between;
-
-            .text-box{
-                width: 55%;
-                
-                &__title{
-                    font-size: $font-head-m;
-                }
-                
-                &__description{
-                    width: 100%;
-                    margin: 0;
-                    margin-top: 25px;
-                }
+    }
+    .booking{
+        padding: 80px 65px;
+        margin: 88px auto 56px auto;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+    
+        .text-box{
+            width: 55%;
+            
+            &__title{
+                font-size: $font-head-m;
             }
-
-            &__button{
-                height: 44px;
-                align-self: center;
+            
+            &__description{
+                width: 100%;
+                margin: 0;
+                margin-top: 25px;
             }
+        }
+    
+        &__button{
+            height: 44px;
+            align-self: center;
         }
     }
 }
 
+
 @media screen and ( min-width: 1200px ){
-    .header, .main, .footer{
+    .header, .main, .footer, .booking{
         width: 1110px;
     }
 }
