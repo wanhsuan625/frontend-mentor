@@ -181,11 +181,15 @@ html, body{
     &__img-container{
         display: flex;
         height: 180px;
-
+        
+        .swiper-slide{
+            width: 270px;
+        }
         .carousel-img{
             border-radius: 10px;
-            height: auto;
-            max-width: 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
     
@@ -318,6 +322,10 @@ html, body{
         }
         &__img-container{
             height: 360px;
+            
+            .swiper-slide{
+                width: 540px;
+            }
         }
     }
     .booking{

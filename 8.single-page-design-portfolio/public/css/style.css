@@ -166,10 +166,14 @@ html, body {
   display: flex;
   height: 180px;
 }
+.carousel__img-container .swiper-slide {
+  width: 270px;
+}
 .carousel__img-container .carousel-img {
   border-radius: 10px;
-  height: auto;
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .carousel .arrow-box .arrow {
   border-radius: 50%;
@@ -282,6 +286,9 @@ html, body {
   }
   .carousel__img-container {
     height: 360px;
+  }
+  .carousel__img-container .swiper-slide {
+    width: 540px;
   }
   .booking {
     margin: 120px auto 22px auto;

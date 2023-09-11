@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./public/image/favicon-32x32.png">
   <link rel="stylesheet" href="./public/css/style.css">
   
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.js"></script>
   <title>Frontend Mentor | Single-page design portfolio</title>
 </head>
 <body>
@@ -88,23 +88,33 @@
       <!-- SWIPER CONTAINER -->
       <div class="swiper">
         <div class="carousel__img-container swiper-wrapper">
-          <img class="carousel-img swiper-slide" src="./public/image/image-slide-1.jpg" alt="">
-          <img class="carousel-img swiper-slide" src="./public/image/image-slide-2.jpg" alt="">
-          <img class="carousel-img swiper-slide" src="./public/image/image-slide-3.jpg" alt="">
-          <img class="carousel-img swiper-slide" src="./public/image/image-slide-4.jpg" alt="">
-          <img class="carousel-img swiper-slide" src="./public/image/image-slide-5.jpg" alt="">
+          <div class="swiper-slide">
+            <img class="carousel-img" src="./public/image/image-slide-1.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img class="carousel-img" src="./public/image/image-slide-2.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img class="carousel-img" src="./public/image/image-slide-3.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img class="carousel-img" src="./public/image/image-slide-4.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img class="carousel-img" src="./public/image/image-slide-5.jpg" alt="">
+          </div>
         </div>
       </div>
       <!-- SWIPER CONTAINER -->
       <div class="arrow-box">
         <img
           id="arrowPrev"
-          class="arrow arrow--hover swiper-button-prev" 
+          class="arrow arrow--hover arrow-prev" 
           src="./public/image/icon-arrow-left.svg"
           alt="">
         <img
           id="arrowNext"
-          class="arrow arrow--hover swiper-button-next"
+          class="arrow arrow--hover arrow-next"
           src="./public/image/icon-arrow-right.svg"
           alt="">
       </div>

@@ -5,7 +5,8 @@ const swiper = new Swiper('.swiper', {
     centeredSlides: true,
     spaceBetween: 15,
     loop: true,
-
+    initialSlide: 2,
+    
     keyboard: {
       enabled: true,
       onlyInViewport: false,
@@ -13,8 +14,8 @@ const swiper = new Swiper('.swiper', {
 
     // Navigation arrows
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.arrow-next',
+        prevEl: '.arrow-prev',
     },
 
     breakpoints: {
