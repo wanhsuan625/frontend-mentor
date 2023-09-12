@@ -40,6 +40,12 @@ html, body{
     }
 }
 
+.disable{
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+// --- HEADER and FOOTER ---------
 .header , .footer{
     padding: 16px;
     @extend %flex-center;

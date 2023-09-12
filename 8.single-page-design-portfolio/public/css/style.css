@@ -39,6 +39,11 @@ html, body {
   transform: translateY(1px);
 }
 
+.disable {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
 .header, .footer {
   padding: 16px;
   justify-content: space-between;
