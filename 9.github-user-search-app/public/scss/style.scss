@@ -1,4 +1,50 @@
+@import 'font.scss' , 'color.scss';
+
 *{
     position: relative;
     box-sizing: border-box;
+}
+body{
+    font-family: 'Space Mono', monospace;
+    min-height: 100%;
+}
+%flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    height: 100vh;
+    background-color: $light_wrapper;
+    padding-top: 31px;
+}
+
+.header, .main{
+    width: 87%;
+    margin: 0 auto;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+
+    &__logo{
+        @extend %font-header-l;
+        margin: 0;
+        cursor: pointer;
+        color: $light_switch;
+    }
+    &__mode{
+        @extend %font-body-s;
+        font-weight: 700;
+        cursor: pointer;
+        letter-spacing: 2.5px;
+        color: $light_primary;
+        display: flex;
+        align-items: center;
+
+        span{
+            margin-right: 16px;
+        }
+    }
 }

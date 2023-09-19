@@ -5,24 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./public/css/reset.css">
+  <link rel="stylesheet" href="./public/css/style.css">
+
   <title>Frontend Mentor | GitHub user search app</title>
 </head>
 <body>
+  <div class="wrapper">
+    <!-- HEADER -->
+    <header class="header">
+      <a class="header__logo" href="./index.html">devfinder</a>
+      <div class="header__mode header__mode--hover">
+        <span>DARK</span>
+        <img src="./public/image/icon-moon.svg">
+      </div>
+    </header>
+    <!-- HEADER END -->
 
-  devfinder
+    <main class="main">
+      <!-- SEARCH BAR -->
+      <div class="search search-container">
+        <img
+          class="search__icon" 
+          src="./public/image/icon-search.svg"
+          alt="">
+        <input
+          type="text"
+          class="search__input"
+          placeholder="Search GitHub username...">
+        <button class="search__button">Search</button>
+      </div>
+      <!-- SEARCH BAR END -->
 
-  Light
-  Dark
+      <!-- CONTENT -->
+      <section class="content">
+        
+      </section>
+    </main>
 
-  Search GitHub username...
-  Search
+    Joined
 
-  Joined
-
-  Repos
-  Followers
-  Following
+    Repos
+    Followers
+    Following
+  </div>
 
 </body>
 </html>
