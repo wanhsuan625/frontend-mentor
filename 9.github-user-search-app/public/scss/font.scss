@@ -21,3 +21,6 @@
 %font-body-s{
     @include font( 13px , 400 , 25px );
 }
+%font-body-xs{
+    @include font( 11px , 400 , 16px );
+}

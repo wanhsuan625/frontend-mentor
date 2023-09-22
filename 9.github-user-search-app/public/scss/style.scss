@@ -15,7 +15,7 @@ body{
 }
 
 .wrapper{
-    height: 100vh;
+    height: 100%;
     background-color: $light_wrapper;
     padding-top: 31px;
 }
@@ -57,6 +57,7 @@ body{
         @extend %flex-center;
         justify-content: space-between;
         margin-bottom: 16px;
+        box-shadow: 0px 16px 30px -10px $shadow;
         
         &__icon{
             width: 20px;
@@ -90,4 +91,77 @@ body{
     }
 
     // CONTENT -------------------------------------------
+    .content-container{
+        background-color: $light_background;
+        border-radius: 15px;
+        padding: 24px;
+        box-shadow: 0px 16px 30px -10px $shadow;
+        color: $light_secondary;
+        @extend %font-body-s;
+        
+        // INDIVIDUAL
+        .individual{
+            display: flex;
+            align-items: center;
+            margin-top: 8px;
+            
+            &__head-photo{
+                width: 70px;
+                height: 70px;
+                margin-right: 19px;
+            }
+            &__username{
+                @extend %font-header-s;
+                font-weight: 700;
+                margin: 0;
+                color: $light_neutral;
+            }
+            &__link{ color: $blue; }
+        }
+
+        // PARAGRAPH
+        .paragraph{
+            padding: 33px 0 23px 0;
+        }
+
+        // GITHUB DETAIL
+        .github{
+            background-color: $light_wrapper;
+            border-radius: 10px;
+            padding: 18px 14px;
+            display: flex;
+            justify-content: space-evenly;
+            
+            &-box{
+                text-align: center;
+
+                &__headline{
+                    @extend %font-body-xs;
+                    margin-bottom: 8px;
+                }
+                &__amount{
+                    @extend %font-header-s;
+                    font-weight: 700;
+                    color: $light_neutral;
+                }
+            }
+        }
+
+        // SOCIAL MEDIA
+        .social{
+            margin: 24px 0 48px 0;
+
+            &-box{
+                display: flex;
+                margin-bottom: 16px;
+
+                &__text{
+                    margin-left: 13px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+
+
 }

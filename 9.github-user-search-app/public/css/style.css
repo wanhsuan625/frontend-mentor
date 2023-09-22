@@ -5,10 +5,22 @@
   line-height: 38px;
 }
 
-.main .search__button, .main .search__input, .header__mode {
+.main .content-container .github-box__amount, .main .content-container .individual__username {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.main .content-container, .main .search__button, .main .search__input, .header__mode {
   font-size: 13px;
   font-weight: 400;
   line-height: 25px;
+}
+
+.main .content-container .github-box__headline {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16px;
 }
 
 * {
@@ -28,7 +40,7 @@ body {
 }
 
 .wrapper {
-  height: 100vh;
+  height: 100%;
   background-color: #F6F8FF;
   padding-top: 31px;
 }
@@ -66,6 +78,7 @@ body {
   padding: 7px;
   justify-content: space-between;
   margin-bottom: 16px;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
 }
 .main .search__icon {
   width: 20px;
@@ -92,4 +105,60 @@ body {
 }
 .main .search__button--active:active {
   box-shadow: 0px 4px 3px -1px rgba(70, 96, 187, 0.2);
+}
+.main .content-container {
+  background-color: #FEFEFE;
+  border-radius: 15px;
+  padding: 24px;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+  color: #697C9A;
+}
+.main .content-container .individual {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+.main .content-container .individual__head-photo {
+  width: 70px;
+  height: 70px;
+  margin-right: 19px;
+}
+.main .content-container .individual__username {
+  font-weight: 700;
+  margin: 0;
+  color: #2B3442;
+}
+.main .content-container .individual__link {
+  color: #0079FF;
+}
+.main .content-container .paragraph {
+  padding: 33px 0 23px 0;
+}
+.main .content-container .github {
+  background-color: #F6F8FF;
+  border-radius: 10px;
+  padding: 18px 14px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.main .content-container .github-box {
+  text-align: center;
+}
+.main .content-container .github-box__headline {
+  margin-bottom: 8px;
+}
+.main .content-container .github-box__amount {
+  font-weight: 700;
+  color: #2B3442;
+}
+.main .content-container .social {
+  margin: 24px 0 48px 0;
+}
+.main .content-container .social-box {
+  display: flex;
+  margin-bottom: 16px;
+}
+.main .content-container .social-box__text {
+  margin-left: 13px;
+  line-height: 20px;
 }/*# sourceMappingURL=style.css.map */
