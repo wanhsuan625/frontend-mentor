@@ -6,7 +6,7 @@
 }
 body{
     font-family: 'Space Mono', monospace;
-    min-height: 100%;
+    height: 100%;
 }
 %flex-center{
     display: flex;
@@ -15,9 +15,9 @@ body{
 }
 
 .wrapper{
-    height: 100%;
+    min-height: 100vh;
     background-color: $light_wrapper;
-    padding-top: 31px;
+    padding: 31px 0 80px 0;
 }
 
 .header, .main{
@@ -30,13 +30,13 @@ body{
     margin-bottom: 36px;
 
     &__logo{
-        @extend %font-header-l;
+        @include font-header-l;
         margin: 0;
         cursor: pointer;
         color: $light_switch;
     }
     &__mode{
-        @extend %font-body-s;
+        @include font-body-s;
         font-weight: 700;
         cursor: pointer;
         letter-spacing: 2.5px;
@@ -48,120 +48,234 @@ body{
     }
 }
 
-.main{
-    // SEARCH BAR ----------------------------------
-    .search{
-        background-color: $light_background;
-        border-radius: 15px;
-        padding: 7px;
-        @extend %flex-center;
-        justify-content: space-between;
-        margin-bottom: 16px;
-        box-shadow: 0px 16px 30px -10px $shadow;
-        
-        &__icon{
-            width: 20px;
-            height: 20px;
-            margin-left: 9px;
-        }
-        &__input{
-            width: 60%;
-            border: 0;
-            cursor: pointer;
-            @extend %font-body-s;
-            outline: none;
-        }
-        &__button{
-            font-weight: 700;
-            cursor: pointer;
-            background-color: $blue;
-            padding: 11px 16px;
-            border: 0;
-            border-radius: 10px;
-            color: $white;
-            @extend %font-body-s;
+// SEARCH BAR ----------------------------------
+.search{
+    background-color: $light_background;
+    border-radius: 15px;
+    padding: 7px;
+    @extend %flex-center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    box-shadow: 0px 16px 30px -10px $shadow;
+    
+    &__box{
+        width: 75%;
+        display: flex;
+        align-items: center;
+    }
+    &__icon{
+        width: 20px;
+        height: 20px;
+        margin: 0 9px;
+    }
+    &__input{
+        width: 90%;
+        border: 0;
+        cursor: pointer;
+        @include font-body-s;
+        outline: none;
+    }
+    &__button{
+        font-weight: 700;
+        cursor: pointer;
+        background-color: $blue;
+        padding: 11px 16px;
+        border: 0;
+        border-radius: 10px;
+        color: $white;
+        @include font-body-s;
 
-            &--hover:hover{
-                background-color: $blue-lighter;
-            }
-            &--active:active{
-                box-shadow: 0px 4px 3px -1px $shadow;
-            }
+        &--hover:hover{
+            background-color: $blue-lighter;
+        }
+        &--active:active{
+            box-shadow: 0px 4px 3px -1px $shadow;
         }
     }
+}
 
-    // CONTENT -------------------------------------------
-    .content-container{
-        background-color: $light_background;
-        border-radius: 15px;
-        padding: 24px;
-        box-shadow: 0px 16px 30px -10px $shadow;
-        color: $light_secondary;
-        @extend %font-body-s;
+// CONTENT -------------------------------------------
+.content-container{
+    background-color: $light_background;
+    border-radius: 15px;
+    padding: 24px;
+    box-shadow: 0px 16px 30px -10px $shadow;
+    color: $light_secondary;
+    @include font-body-s;
+    
+    // INDIVIDUAL
+    .individual{
+        display: flex;
+        align-items: center;
+        margin-top: 8px;
         
-        // INDIVIDUAL
-        .individual{
-            display: flex;
-            align-items: center;
-            margin-top: 8px;
-            
-            &__head-photo{
-                width: 70px;
-                height: 70px;
-                margin-right: 19px;
+        &__head-photo{
+            width: 70px;
+            height: 70px;
+            margin-right: 19px;
+        }
+        &__username{
+            @include font-header-s;
+            font-weight: 700;
+            margin: 0;
+            color: $light_neutral;
+        }
+        &__link{ color: $blue; }
+    }
+
+    // PARAGRAPH
+    .paragraph{
+        padding: 33px 0 23px 0;
+    }
+
+    // GITHUB DETAIL
+    .github{
+        background-color: $light_wrapper;
+        border-radius: 10px;
+        padding: 18px 14px;
+        display: flex;
+        justify-content: space-evenly;
+        
+        &-box{
+            text-align: center;
+
+            &__headline{
+                @include font-body-xs;
+                margin-bottom: 8px;
             }
-            &__username{
-                @extend %font-header-s;
+            &__amount{
+                @include font-header-s;
                 font-weight: 700;
-                margin: 0;
                 color: $light_neutral;
             }
-            &__link{ color: $blue; }
-        }
-
-        // PARAGRAPH
-        .paragraph{
-            padding: 33px 0 23px 0;
-        }
-
-        // GITHUB DETAIL
-        .github{
-            background-color: $light_wrapper;
-            border-radius: 10px;
-            padding: 18px 14px;
-            display: flex;
-            justify-content: space-evenly;
-            
-            &-box{
-                text-align: center;
-
-                &__headline{
-                    @extend %font-body-xs;
-                    margin-bottom: 8px;
-                }
-                &__amount{
-                    @extend %font-header-s;
-                    font-weight: 700;
-                    color: $light_neutral;
-                }
-            }
-        }
-
-        // SOCIAL MEDIA
-        .social{
-            margin: 24px 0 48px 0;
-
-            &-box{
-                display: flex;
-                margin-bottom: 16px;
-
-                &__text{
-                    margin-left: 13px;
-                    line-height: 20px;
-                }
-            }
         }
     }
 
+    // SOCIAL MEDIA
+    .social{
+        margin: 24px 0 48px 0;
 
+        &-box{
+            display: flex;
+            margin-bottom: 16px;
+            
+            &__text{
+                margin-left: 13px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+@media screen and ( min-width: 768px){
+    .header, .main{
+        width: 75%;
+    }
+    .search{
+        padding: 9px;
+        margin-bottom: 24px;
+
+        &__box{ width: 95%; }
+        &__icon{ margin: 0 23px; }
+        &__button{
+            font-size: 16px;
+            padding: 13px 24px;
+        }
+    }
+    
+    .content-container{
+        padding: 40px;
+
+        .individual{
+            &__head-photo{
+                width: 117px;
+                height: 117px;
+                margin-right: 37px;
+            }
+            &__username{
+                @include font-header-l;
+            }
+            &__link{
+                @include font-header-s;
+                margin: 3px 0;
+            }
+            &__joined-date{
+                @include font-body-m;
+            }
+        }
+
+        .paragraph{
+            @include font-body-m;
+            padding-top: 24px;
+        }
+
+        .github{
+            padding: 16px 32px;
+
+            &-box{
+                width: 33%;
+                text-align: start;
+                &__headline{
+                    @include font-body-s;
+                    margin: 0;
+                }
+                &__amount{
+                    @include font-header-m;
+                }
+            }
+        }
+
+        .social{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 0;
+
+            &-box{
+                width: 45%;
+                
+                &:nth-child(odd){
+                    order: -1;
+                }
+                &__icon{
+                    width: 20px;
+                    object-fit: none;
+                }
+                &__text{ @include font-body-m; }
+            }
+        }
+    }
+}
+
+@media screen and ( min-width: 992px ) {
+    .header, .main{
+        width: 730px;
+    }
+    .search{
+        &__input{ font-size: 18px; }
+    }
+    .content-container{
+        padding: 48px;
+        
+        .individual{
+            .user-box{
+                width: 100%;
+            }
+            align-items: flex-start;
+
+            &__joined-date{
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+        .paragraph{ 
+            margin-top: -20px;
+            padding-top: 0;
+        }
+        .paragraph , .github , .social{
+            width: 480px;
+            margin-left: auto;
+        }
+    }
 }

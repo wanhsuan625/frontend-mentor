@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./public/image/favicon-32x32.png">
   <link rel="stylesheet" href="./public/css/reset.css">
   <link rel="stylesheet" href="./public/css/style.css">
 
@@ -25,14 +25,16 @@
     <main class="main">
       <!-- SEARCH BAR -->
       <div class="search search-container">
-        <img
-          class="search__icon" 
-          src="./public/image/icon-search.svg"
-          alt="">
-        <input
-          type="text"
-          class="search__input"
-          placeholder="Search GitHub username...">
+        <div class="search__box">
+          <img
+            class="search__icon" 
+            src="./public/image/icon-search.svg"
+            alt="">
+          <input
+            type="text"
+            class="search__input"
+            placeholder="Search GitHub username...">
+        </div>
         <button class="search__button search__button--hover search__button--active">Search</button>
       </div>
       <!-- SEARCH BAR END -->

@@ -1,28 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
-.header__logo {
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 38px;
-}
-
-.main .content-container .github-box__amount, .main .content-container .individual__username {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-}
-
-.main .content-container, .main .search__button, .main .search__input, .header__mode {
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 25px;
-}
-
-.main .content-container .github-box__headline {
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 16px;
-}
-
 * {
   position: relative;
   box-sizing: border-box;
@@ -30,19 +6,19 @@
 
 body {
   font-family: "Space Mono", monospace;
-  min-height: 100%;
+  height: 100%;
 }
 
-.main .search {
+.search {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .wrapper {
-  height: 100%;
+  min-height: 100vh;
   background-color: #F6F8FF;
-  padding-top: 31px;
+  padding: 31px 0 80px 0;
 }
 
 .header, .main {
@@ -56,11 +32,17 @@ body {
   margin-bottom: 36px;
 }
 .header__logo {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 38px;
   margin: 0;
   cursor: pointer;
   color: #222731;
 }
 .header__mode {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 25px;
   font-weight: 700;
   cursor: pointer;
   letter-spacing: 2.5px;
@@ -72,7 +54,7 @@ body {
   margin-right: 16px;
 }
 
-.main .search {
+.search {
   background-color: #FEFEFE;
   border-radius: 15px;
   padding: 7px;
@@ -80,18 +62,26 @@ body {
   margin-bottom: 16px;
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
 }
-.main .search__icon {
+.search__box {
+  width: 75%;
+  display: flex;
+  align-items: center;
+}
+.search__icon {
   width: 20px;
   height: 20px;
-  margin-left: 9px;
+  margin: 0 9px;
 }
-.main .search__input {
-  width: 60%;
+.search__input {
+  width: 90%;
   border: 0;
   cursor: pointer;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 25px;
   outline: none;
 }
-.main .search__button {
+.search__button {
   font-weight: 700;
   cursor: pointer;
   background-color: #0079FF;
@@ -99,66 +89,201 @@ body {
   border: 0;
   border-radius: 10px;
   color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 25px;
 }
-.main .search__button--hover:hover {
+.search__button--hover:hover {
   background-color: #60ABFF;
 }
-.main .search__button--active:active {
+.search__button--active:active {
   box-shadow: 0px 4px 3px -1px rgba(70, 96, 187, 0.2);
 }
-.main .content-container {
+
+.content-container {
   background-color: #FEFEFE;
   border-radius: 15px;
   padding: 24px;
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
   color: #697C9A;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 25px;
 }
-.main .content-container .individual {
+.content-container .individual {
   display: flex;
   align-items: center;
   margin-top: 8px;
 }
-.main .content-container .individual__head-photo {
+.content-container .individual__head-photo {
   width: 70px;
   height: 70px;
   margin-right: 19px;
 }
-.main .content-container .individual__username {
+.content-container .individual__username {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
   font-weight: 700;
   margin: 0;
   color: #2B3442;
 }
-.main .content-container .individual__link {
+.content-container .individual__link {
   color: #0079FF;
 }
-.main .content-container .paragraph {
+.content-container .paragraph {
   padding: 33px 0 23px 0;
 }
-.main .content-container .github {
+.content-container .github {
   background-color: #F6F8FF;
   border-radius: 10px;
   padding: 18px 14px;
   display: flex;
   justify-content: space-evenly;
 }
-.main .content-container .github-box {
+.content-container .github-box {
   text-align: center;
 }
-.main .content-container .github-box__headline {
+.content-container .github-box__headline {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16px;
   margin-bottom: 8px;
 }
-.main .content-container .github-box__amount {
+.content-container .github-box__amount {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
   font-weight: 700;
   color: #2B3442;
 }
-.main .content-container .social {
+.content-container .social {
   margin: 24px 0 48px 0;
 }
-.main .content-container .social-box {
+.content-container .social-box {
   display: flex;
   margin-bottom: 16px;
 }
-.main .content-container .social-box__text {
+.content-container .social-box__text {
   margin-left: 13px;
   line-height: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .header, .main {
+    width: 75%;
+  }
+  .search {
+    padding: 9px;
+    margin-bottom: 24px;
+  }
+  .search__box {
+    width: 95%;
+  }
+  .search__icon {
+    margin: 0 23px;
+  }
+  .search__button {
+    font-size: 16px;
+    padding: 13px 24px;
+  }
+  .content-container {
+    padding: 40px;
+  }
+  .content-container .individual__head-photo {
+    width: 117px;
+    height: 117px;
+    margin-right: 37px;
+  }
+  .content-container .individual__username {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 38px;
+  }
+  .content-container .individual__link {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 3px 0;
+  }
+  .content-container .individual__joined-date {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+  }
+  .content-container .paragraph {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    padding-top: 24px;
+  }
+  .content-container .github {
+    padding: 16px 32px;
+  }
+  .content-container .github-box {
+    width: 33%;
+    text-align: start;
+  }
+  .content-container .github-box__headline {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 25px;
+    margin: 0;
+  }
+  .content-container .github-box__amount {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 33px;
+  }
+  .content-container .social {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+  .content-container .social-box {
+    width: 45%;
+  }
+  .content-container .social-box:nth-child(odd) {
+    order: -1;
+  }
+  .content-container .social-box__icon {
+    width: 20px;
+    object-fit: none;
+  }
+  .content-container .social-box__text {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .header, .main {
+    width: 730px;
+  }
+  .search__input {
+    font-size: 18px;
+  }
+  .content-container {
+    padding: 48px;
+  }
+  .content-container .individual {
+    align-items: flex-start;
+  }
+  .content-container .individual .user-box {
+    width: 100%;
+  }
+  .content-container .individual__joined-date {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .content-container .paragraph {
+    margin-top: -20px;
+    padding-top: 0;
+  }
+  .content-container .paragraph, .content-container .github, .content-container .social {
+    width: 480px;
+    margin-left: auto;
+  }
 }/*# sourceMappingURL=style.css.map */
