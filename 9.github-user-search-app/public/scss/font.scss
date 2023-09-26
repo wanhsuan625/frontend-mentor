@@ -6,21 +6,21 @@
     line-height: $lineHeight;
 }
 
-%font-header-l{
+@mixin font-header-l{
     @include font( 26px , 700 , 38px );
 }
-%font-header-m{
+@mixin font-header-m{
     @include font( 22px , 700 , 33px );
 }
-%font-header-s{
+@mixin font-header-s{
     @include font( 16px , 400 , 24px );
 }
-%font-body-m{
+@mixin font-body-m{
     @include font( 15px , 400 , 25px );
 }
-%font-body-s{
+@mixin font-body-s{
     @include font( 13px , 400 , 25px );
 }
-%font-body-xs{
+@mixin font-body-xs{
     @include font( 11px , 400 , 16px );
 }
