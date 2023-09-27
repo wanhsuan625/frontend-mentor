@@ -1,16 +1,12 @@
 // LIGHT MODE COLOR
-$light_wrapper: #F6F8FF;
-$light_background: #FEFEFE;
-$light_primary: #4B6A9B;
-$light_secondary: #697C9A;
-$light_neutral: #2B3442;
-$light_switch: #222731;
-
-// DARK MODE COLOR
-$dark_wrapper: #141D2F;
-$dark_background: #1E2A47;
-$dark_primary: #FFFFFF;
-$dark_switch: #90A4D4;
+:root {
+    --wrapper: #F6F8FF;
+    --background: #FEFEFE;
+    --primary: #4B6A9B;
+    --secondary: #697C9A;
+    --neutral: #2B3442;
+    --switch: #222731;
+}
 
 // COMMON
 $blue: #0079FF;

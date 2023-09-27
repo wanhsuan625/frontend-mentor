@@ -1,1 +1,8 @@
-/*# sourceMappingURL=color.css.map */
+:root {
+  --wrapper: #F6F8FF;
+  --background: #FEFEFE;
+  --primary: #4B6A9B;
+  --secondary: #697C9A;
+  --neutral: #2B3442;
+  --switch: #222731;
+}/*# sourceMappingURL=color.css.map */
