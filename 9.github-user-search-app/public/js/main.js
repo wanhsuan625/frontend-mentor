@@ -1,6 +1,3 @@
-const mode_container = document.querySelector("#modeContainer");
-const mode_text = document.querySelector("#modeText");
-const mode_icon = document.querySelector("#modeIcon");
 const search_input = document.querySelector("#searchInput");
 const close_icon = document.querySelector("#closeIcon");
 

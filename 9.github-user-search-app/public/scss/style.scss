@@ -8,15 +8,39 @@ body{
     font-family: 'Space Mono', monospace;
     height: 100%;
 }
+.darkmode{
+    // Moify colors
+    --wrapper: #141D2F;
+    --background: #1E2A47;
+    --primary: #FFFFFF;
+    --secondary: #FFFFFF;
+    --neutral: #FFFFFF;
+    --switch: #90A4D4;
+    
+    .header__mode-icon{
+        filter: brightness(0) saturate(100%) invert(89%) sepia(14%) saturate(7054%) hue-rotate(185deg) brightness(87%) contrast(89%);
+    }
+    .social-box__icon{
+        filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(2%) hue-rotate(4deg) brightness(113%) contrast(101%);
+    }
+    // Clear box shadow
+    .search , .content-container{
+        box-shadow: none;
+    }
+    .header{
+        .light{ display: inline; }
+        .dark{ display: none;}
+    }
+}
+
 %flex-center{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .wrapper{
     min-height: 100vh;
-    background-color: $light_wrapper;
+    background-color: var(--wrapper);
     padding: 31px 0 80px 0;
 }
 
@@ -33,24 +57,32 @@ body{
         @include font-header-l;
         margin: 0;
         cursor: pointer;
-        color: $light_switch;
+        color: var(--neutral);
     }
     &__mode{
         @include font-body-s;
         font-weight: 700;
         cursor: pointer;
         letter-spacing: 2.5px;
-        color: $light_primary;
+        color: var(--switch);
         display: flex;
         align-items: center;
 
         span{ margin-right: 16px; }
     }
+
+    &__mode-icon{
+        width: 20px;
+        height: 20px;
+        filter: brightness(0) saturate(100%) invert(9%) sepia(34%) saturate(582%) hue-rotate(180deg) brightness(91%) contrast(85%);
+    }
+    .light{ display: none; }
+    .dark{ display: inline;}
 }
 
 // SEARCH BAR ----------------------------------
 .search{
-    background-color: $light_background;
+    background-color: var(--background);
     border-radius: 15px;
     padding: 7px;
     @extend %flex-center;
@@ -59,7 +91,7 @@ body{
     box-shadow: 0px 16px 30px -10px $shadow;
     
     &__box{
-        width: 75%;
+        width: 95%;
         display: flex;
         align-items: center;
     }
@@ -71,9 +103,26 @@ body{
     &__input{
         width: 90%;
         border: 0;
-        cursor: pointer;
+        cursor: text;
         @include font-body-s;
         outline: none;
+        background-color: transparent;
+        color: var(--neutral);
+        text-overflow: ellipsis;
+    }    
+    &__close-icon{
+        display: none;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        right: 3px;
+
+        path{
+            fill: var(--secondary);
+        }
+        &--hover:hover{
+            transform: scale(1.2);
+        }
     }
     &__button{
         font-weight: 700;
@@ -96,11 +145,11 @@ body{
 
 // CONTENT -------------------------------------------
 .content-container{
-    background-color: $light_background;
+    background-color: var(--background);
     border-radius: 15px;
     padding: 24px;
     box-shadow: 0px 16px 30px -10px $shadow;
-    color: $light_secondary;
+    color: var(--secondary);
     @include font-body-s;
     
     // INDIVIDUAL
@@ -118,7 +167,7 @@ body{
             @include font-header-s;
             font-weight: 700;
             margin: 0;
-            color: $light_neutral;
+            color: var(--neutral);
         }
         &__link{ color: $blue; }
     }
@@ -130,7 +179,7 @@ body{
 
     // GITHUB DETAIL
     .github{
-        background-color: $light_wrapper;
+        background-color: var(--wrapper);
         border-radius: 10px;
         padding: 18px 14px;
         display: flex;
@@ -146,7 +195,7 @@ body{
             &__amount{
                 @include font-header-s;
                 font-weight: 700;
-                color: $light_neutral;
+                color: var(--neutral);
             }
         }
     }
@@ -157,17 +206,40 @@ body{
 
         &-box{
             display: flex;
+            align-items: center;
             margin-bottom: 16px;
             
             &__text{
                 margin-left: 13px;
                 line-height: 20px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            &__icon{
+                width: 20px;
+                height: 20px;
+                object-fit: none;
+            }
+        }
+
+        &__link{
+            color: var(--secondary);
+            
+            &--hover:hover{
+                text-decoration: underline;
+            }
+
+            &--active:active{
+                color: $blue;
             }
         }
     }
 }
 
-@media screen and ( min-width: 768px){
+// RWD ---------------------------------------------
+// TABLET
+@media screen and ( min-width: 576px){
     .header, .main{
         width: 75%;
     }
@@ -175,11 +247,13 @@ body{
         padding: 9px;
         margin-bottom: 24px;
 
-        &__box{ width: 95%; }
         &__icon{ margin: 0 23px; }
         &__button{
             font-size: 16px;
             padding: 13px 24px;
+        }
+        &__close-icon{
+            right: 8px;
         }
     }
     
@@ -236,10 +310,6 @@ body{
                 
                 &:nth-child(odd){
                     order: -1;
-                }
-                &__icon{
-                    width: 20px;
-                    object-fit: none;
                 }
                 &__text{ @include font-body-m; }
             }
