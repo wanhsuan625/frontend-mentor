@@ -43,7 +43,7 @@
           </svg>
         </div>
         
-        <button class="search__button search__button--hover search__button--active">Search</button>
+        <button id="searchButton" class="search__button search__button--hover search__button--active">Search</button>
       </div>
       <!-- SEARCH BAR END -->
 
@@ -51,32 +51,30 @@
       <section class="content-container">
         <!-- INDIVIDUAL BOX -->
         <div class="individual">
-          <img class="individual__head-photo" src="./public/image/head photo.png" alt="">
+          <img id="avatar" class="individual__head-photo"alt="">
           <div class="user-box">
-            <h1 id="username" class="individual__username">The Octocat</h1>
-            <p id="userlink" class="individual__link">@octocat</p>
-            <p class="individual__joined-date">Joined 25 Jan 2021</p>
+            <h1 id="username" class="individual__username"></h1>
+            <p id="userlink" class="individual__link"></p>
+            <p id="joinedDate" class="individual__joined-date"></p>
           </div>
         </div>
         <!-- END INDIVIDUAL BOX -->
 
-        <p class="paragraph">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente quidem laboriosam doloremque porro, voluptas repellendus reprehenderit sequi aperiam sint atque quae qui.
-        </p>
+        <p id="bio" class="paragraph"></p>
 
         <!-- GITHUB DETAIL -->
         <div class="github">
           <div class="github-box">
             <h1 class="github-box__headline">Repos</h1>
-            <p class="github-box__amount">8</p>
+            <p class="github-box__amount" id="repo"></p>
           </div>
           <div class="github-box">
             <h1 class="github-box__headline">Followers</h1>
-            <p class="github-box__amount">3938</p>
+            <p class="github-box__amount" id="follower"></p>
           </div>
           <div class="github-box">
             <h1 class="github-box__headline">Following</h1>
-            <p class="github-box__amount">9</p>
+            <p class="github-box__amount" id="following"></p>
           </div>
         </div>
         <!-- END GITHUB DETAIL -->
@@ -85,23 +83,21 @@
         <div class="social">
           <div class="social-box">
             <img class="social-box__icon" src="./public/image/icon-location.svg" alt="">
-            <p class="social-box__text">San Francisco</p>
+            <p id="site" class="social-box__text"></p>
           </div>
           <div class="social-box">
             <img class="social-box__icon" src="./public/image/icon-website.svg" alt="">
             <p class="social-box__text">
-              <a href="#" class="social__link social__link--hover social__link--active">
-                https://github.blog
-              </a>
+              <a id="website" target="_blank" class="social__link social__link--hover social__link--active"></a>
             </p>
           </div>
           <div class="social-box">
             <img class="social-box__icon" src="./public/image/icon-twitter.svg" alt="">
-            <p class="social-box__text">Not Available</p>
+            <p id="twitter" class="social-box__text">Not Available</p>
           </div>
           <div class="social-box">
             <img class="social-box__icon" src="./public/image/icon-company.svg" alt="">
-            <p class="social-box__text">@github</p>
+            <p id="company" class="social-box__text"></p>
           </div>
         </div>
         <!-- END SOCIAL MEDIA -->
@@ -111,6 +107,6 @@
   </div>
 
   <script src="./public/js/main.js"></script>
-  <script src="./public/js/dark.js"></script>
+  <script src="./public/js/darkMode.js"></script>
 </body>
 </html>
