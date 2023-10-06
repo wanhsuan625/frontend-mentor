@@ -35,12 +35,6 @@ body {
 .darkmode .search, .darkmode .content-container {
   box-shadow: none;
 }
-.darkmode .header .light {
-  display: inline;
-}
-.darkmode .header .dark {
-  display: none;
-}
 
 .search {
   display: flex;
@@ -179,6 +173,7 @@ body {
   width: 70px;
   height: 70px;
   margin-right: 19px;
+  clip-path: circle(50%);
 }
 .content-container .individual__username {
   font-size: 16px;
@@ -239,6 +234,7 @@ body {
 }
 .content-container .social__link {
   color: var(--secondary);
+  cursor: pointer;
 }
 .content-container .social__link--hover:hover {
   text-decoration: underline;
