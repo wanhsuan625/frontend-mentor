@@ -35,6 +35,7 @@
             type="text"
             class="search__input"
             placeholder="Search GitHub username...">
+          <span id="errorMessage" class="search__error-message hidden">No results</span>
           <svg
             id="closeIcon"
             class="search__close-icon search__close-icon--hover"
@@ -43,7 +44,11 @@
           </svg>
         </div>
         
-        <button id="searchButton" class="search__button search__button--hover search__button--active">Search</button>
+        <button
+          id="searchButton"
+          class="search__button search__button--hover search__button--active"
+          type="submit">Search
+        </button>
       </div>
       <!-- SEARCH BAR END -->
 

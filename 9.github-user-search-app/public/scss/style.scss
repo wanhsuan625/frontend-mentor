@@ -28,11 +28,14 @@ body{
         box-shadow: none;
     }
 }
-
 %flex-center{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.hidden{
+    display: none;
+    visibility: hidden;
 }
 .wrapper{
     min-height: 100vh;
@@ -105,7 +108,15 @@ body{
         background-color: transparent;
         color: var(--neutral);
         text-overflow: ellipsis;
-    }    
+    }
+    &__error-message{
+        color: $red;
+        @include font-body-s;
+        font-weight: 700;
+        position: absolute;
+        top: -43px;
+        right: -75px;
+    }
     &__close-icon{
         display: none;
         width: 20px;
@@ -250,6 +261,12 @@ body{
             font-size: 16px;
             padding: 13px 24px;
         }
+        &__error-message{
+            @include font-body-s;
+            font-weight: 700;
+            top: -45px;
+            right: -95px;
+        }
         &__close-icon{
             right: 8px;
         }
@@ -321,6 +338,12 @@ body{
     }
     .search{
         &__input{ font-size: 18px; }
+        &__error-message{
+            @include font-body-m;
+            font-weight: 700;
+            top: 1px;
+            right: 33px;
+        }
     }
     .content-container{
         padding: 48px;
