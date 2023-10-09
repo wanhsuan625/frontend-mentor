@@ -89,9 +89,11 @@ let getData = (user) => {
 };
 
 search_button.addEventListener( "click" , () => {
+    if(search_input.value === "" ) return;
     getData( search_input.value );
 })
 search_input.addEventListener( "keydown" , (e) => {
+    if(search_input.value === "" ) return;
     if( e.key === "Enter" ) getData( search_input.value );
 })
 
