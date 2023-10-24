@@ -8,15 +8,15 @@ import twitter from '../images/icon-twitter.svg';
 function Header() {
     return(
       <>
-          <header className='flex items-center justify-between p-8'>
+          <header className='flex items-center justify-between p-8 pb-0 max-w-7xl mx-auto'>
             <a href='#' className='hover:cursor-pointer'>                
                 <div>
                     <img src={logo} alt='Bookmark'/>
                 </div>
             </a>
 
-            <nav>
-                <ul className='hidden'>
+            <nav className='hidden'>
+                <ul>
                     <li>
                         <button>FEATURES</button>
                     </li>
