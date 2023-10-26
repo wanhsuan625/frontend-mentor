@@ -29,7 +29,7 @@ h4 {
 p {
   font-size: 15px;
   line-height: 25px;
-  @apply text-slate-500;
+  @apply text-gray-400;
 
   @media ( min-width : 1024px ){
     font-size: 18px;
@@ -58,4 +58,8 @@ p {
   background-color: var(--blue);
   border-radius: 0 200px 200px 0;
   z-index: -1;
+}
+.website-size{
+  width: 280px;
+  height: 371px;
 }
