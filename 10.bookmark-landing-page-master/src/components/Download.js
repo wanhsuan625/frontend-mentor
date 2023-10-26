@@ -16,10 +16,10 @@ function Download(){
                     </p>
                 </article>
 
-                <article className='flex gap-10 flex-wrap'>
-                    <Website image={chrome} version='62' marginTop='mt-0'/>
-                    <Website image={firefox} version='55' marginTop='mt-10'/>
-                    <Website image={opera} version='46' marginTop='mt-20'/>
+                <article className='flex gap-10 flex-wrap justify-start'>
+                    <Website image={chrome} webName='chrome' version='62' />
+                    <Website image={firefox} webName='firefox' version='55' />
+                    <Website image={opera} webName='opera' version='46' />
                 </article>
 
 
