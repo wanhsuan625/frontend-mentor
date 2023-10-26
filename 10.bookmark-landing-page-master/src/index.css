@@ -3,10 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+  --blue: #5267DF;
+}
+
 *{
   box-sizing: border-box;
   position: relative;
 }
+
 html,body{
   overflow-x: hidden;
 }
@@ -22,24 +27,35 @@ h4 {
 }
 
 p {
-  @apply text-slate-600;
+  font-size: 15px;
+  line-height: 25px;
+  @apply text-slate-500;
+
+  @media ( min-width : 1024px ){
+    font-size: 18px;
+  }
+}
+.mt-18{
+  margin-top: 72px;
 }
 
-.btn-blue{
-  background-color: #5267DF;
-}
 .background{
   position: absolute;
   right: -40%;
   bottom: 0;
-  height: 70%;
+  height: 80%;
   width: 120%;
-  background-color: #5267DF;
+  background-color: var(--blue);
   border-radius: 200px 0 0 200px;
   z-index: -1;
 }
-@media screen and ( min-width : 1024px ){
-  *{
-    font-size: 18px;
-  }
+.background-left{
+  position: absolute;
+  left: -40%;
+  bottom: -15%;
+  height: 100%;
+  width: 120%;
+  background-color: var(--blue);
+  border-radius: 0 200px 200px 0;
+  z-index: -1;
 }

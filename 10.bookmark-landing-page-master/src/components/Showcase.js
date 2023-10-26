@@ -9,7 +9,7 @@ function Showcase(){
             
                 <article className='text-center md:text-left'>
                     <h1 className='text-3xl mb-4 mt-12 md:text-4xl'>A Simple Bookmark Manager</h1>
-                    <p className='text-base mb-8'>
+                    <p className='mb-8'>
                       A clean and simple interface to organize your favourite websites.
                       Open a new browser tab and see your sites load instantly. 
                       Try it for free.
@@ -17,12 +17,14 @@ function Showcase(){
 
                     <ul className='flex items-center justify-center gap-3 flex-wrap  text-sm font-medium md:justify-start'>
                         <li>
-                            <button className='btn-blue rounded-md py-3 px-3 text-white shadow-lg hover:opacity-75'>
+                            <button className='bg-blue-600 border-2 border-blue-600 rounded-md py-2.5 px-2.5 text-white shadow-lg 
+                                              hover:bg-white hover:text-blue-600 active:translate-y-0.5'>
                                 Get it on Chrome
                             </button>
                         </li>
                         <li>
-                            <button className='bg-slate-100 rounded-md py-3 px-3 text-slate-800 shadow-lg hover:opacity-75'>
+                            <button className='bg-slate-100 border-2 border-slate-100 rounded-md py-2.5 px-2.5 text-slate-800 shadow-lg
+                                                hover:bg-white hover:text-slate-800 hover:border-slate-800 active:translate-y-0.5'>
                                 Get it on Firefox
                             </button>
                         </li>
@@ -30,7 +32,7 @@ function Showcase(){
                 </article>
                 
                 <article>
-                    <img src={hero} alt='' className='w-full object-fill'/>
+                    <img src={hero} alt='' className='w-full'/>
                     <div className='background'></div>
                 </article>
             </section>
