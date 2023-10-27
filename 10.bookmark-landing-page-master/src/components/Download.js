@@ -16,7 +16,7 @@ function Download(){
                     </p>
                 </article>
 
-                <article className='flex gap-10 flex-wrap justify-start'>
+                <article className='grid grid-cols-1 gap-10 justify-start sm:grid-cols-2 lg:grid-cols-3'>
                     <Website image={chrome} webName='chrome' version='62' />
                     <Website image={firefox} webName='firefox' version='55' />
                     <Website image={opera} webName='opera' version='46' />
