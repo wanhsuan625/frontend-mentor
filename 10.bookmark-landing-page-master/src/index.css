@@ -70,6 +70,15 @@ p {
 .question-size{
   max-width: 540px;
 }
+.h-90{
+  height: 360px;
+}
+.w-110{
+  max-width: 440px;
+}
+.letter-5{
+  letter-spacing: 4.5px;
+}
 .question--hover:hover>h2{
   @apply text-red-400;
 }
