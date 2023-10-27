@@ -38,6 +38,10 @@ p {
 .mt-18{
   margin-top: 72px;
 }
+.headline{
+  font-size: 15px;
+  line-height: 32px;
+}
 
 .background{
   position: absolute;
@@ -62,4 +66,10 @@ p {
 .website-size{
   width: 280px;
   height: 371px;
+}
+.question-size{
+  max-width: 540px;
+}
+.question--hover:hover>h2{
+  @apply text-red-400;
 }
