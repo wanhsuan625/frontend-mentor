@@ -2,25 +2,22 @@ import React , { useState } from 'react';
 import arrow from '../images/icon-arrow.svg';
 import arrowActive from '../images/icon-arrow-red.svg';
 
-function Question( { question , answer } ){
-    const [showAnswer , setShowAnswer] = useState(false);
+function Question( { question , answer , showAnswer, onClick } ){
     
     return(
     <>
         <article className='text-left mx-auto question-size border-b first:border-t'>
-            <button 
-                className='w-full px-1 flex justify-between items-center cursor-pointer question--hover'
-                onClick={()=> (setShowAnswer(!showAnswer))}
+            <button
+                className={`w-full px-1 flex justify-between items-center cursor-pointer question--hover ${showAnswer ? 'active' : ''}`}
+                onClick={onClick}
             >
                 <h2 className='font-normal headline pt-5 pb-3 lg:text-xl'> {question} </h2>
-                { showAnswer ? <img src={arrowActive} className='py-2 transform rotate-180'/> : <img src={arrow} className='py-2'/>}
+                { showAnswer ? <img src={arrowActive} className='py-2 transform rotate-180 transition-transform'/> : <img src={arrow} className='py-2'/> }
             </button>
-            {showAnswer && <p className='text-slate-500 py-7 leading-loose lg:text-base lg:leading-loose show'> {answer} </p>}
+            <p className={`text-slate-500 leading-loose ${ showAnswer ? 'h-auto py-7'  : 'h-0 py-0' } transition-height duration-300 lg:text-base lg:leading-loose`}> { showAnswer && answer }</p>
         </article>
     </>
     )
 };
 
 export default Question;
-
-// red-400

@@ -33,7 +33,10 @@ const data = [
 
 function FQA (){
     const [items] = useState(data);
-
+    const showAnswer = false;
+    const [currentQuestionId, setCurrentQuestionId] = useState(null);
+    const handleQuestionClick = (id) => { ( id === currentQuestionId ) ? setCurrentQuestionId(null) : setCurrentQuestionId(id); }
+    
     return (
         <>
             <section className='w-max-7xl text-center mx-8 mb-32 lg:mb-36'>
@@ -48,7 +51,13 @@ function FQA (){
                 <article>
                     <div>
                         {items.map( (item) => (
-                            <Question key={item.id} {...item} />
+                            <Question
+                                key={item.id}
+                                question={item.question}
+                                answer={item.answer}
+                                showAnswer={item.id === currentQuestionId}
+                                onClick={() => handleQuestionClick(item.id) }
+                            />
                         ))}
                     </div>
 

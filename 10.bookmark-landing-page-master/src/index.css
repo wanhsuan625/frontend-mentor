@@ -45,23 +45,27 @@ p {
 
 .background{
   position: absolute;
-  right: -40%;
+  right: -100%;
   bottom: 0;
   height: 80%;
-  width: 120%;
+  width: 180%;
   background-color: var(--blue);
   border-radius: 200px 0 0 200px;
   z-index: -1;
 }
 .background-left{
   position: absolute;
-  left: -40%;
+  left: -100%;
   bottom: -15%;
   height: 100%;
-  width: 120%;
+  width: 180%;
   background-color: var(--blue);
   border-radius: 0 200px 200px 0;
   z-index: -1;
+
+  @media screen and ( min-width: 1024px ){
+    bottom: -25%;
+  }
 }
 .website-size{
   width: 280px;
