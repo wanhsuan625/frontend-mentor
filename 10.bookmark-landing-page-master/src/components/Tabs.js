@@ -57,7 +57,7 @@ function Tab() {
                         {tabs.map( (tab , index) => (
                             <li key = {tab.id} className='border-b'>
                                 <button 
-                                  className={`py-4 ${index === value && 'border-b-4 border-red-400 w-1/2'} hover:text-red-400
+                                  className={`py-4 ${index === value && 'border-b-4 border-red_set w-1/2'} hover:text-red_set
                                              md:w-full md:px-10 md:pb-7`}
                                   onClick={ () => setValue(index) }  
                                 >
@@ -77,8 +77,8 @@ function Tab() {
                             <h2 className='text-2xl leading-loose py-0.5 md:mb-4'> {title} </h2>
                             <p className='md:w-4/5'> {content} </p>
                             <button
-                             className='mt-4 py-2 px-5 bg-blue-600 border-2 border-blue-600 rounded-md text-white shadow-lg 
-                                      hover:bg-white hover:text-blue-600 active:translate-y-0.5 md:mt-8'>
+                             className='mt-4 py-2 px-5 bg-blue_set border-2 border-blue_set rounded-md text-white shadow-lg 
+                                      hover:bg-white hover:text-blue_set active:translate-y-0.5 md:mt-8'>
                                 {link}
                             </button>
                         </article>

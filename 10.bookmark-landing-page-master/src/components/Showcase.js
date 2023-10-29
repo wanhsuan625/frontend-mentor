@@ -17,8 +17,8 @@ function Showcase(){
 
                     <ul className='flex items-center justify-center gap-3 flex-wrap  text-sm font-medium md:justify-start'>
                         <li>
-                            <button className='bg-blue-600 border-2 border-blue-600 rounded-md py-2.5 px-2.5 text-white shadow-lg 
-                                              hover:bg-white hover:text-blue-600 active:translate-y-0.5'>
+                            <button className='bg-blue_set border-2 border-blue_set rounded-md py-2.5 px-2.5 text-white shadow-lg 
+                                              hover:bg-white hover:text-blue_set active:translate-y-0.5'>
                                 Get it on Chrome
                             </button>
                         </li>
