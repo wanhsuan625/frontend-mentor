@@ -33,7 +33,6 @@ const data = [
 
 function FQA (){
     const [items] = useState(data);
-    const showAnswer = false;
     const [currentQuestionId, setCurrentQuestionId] = useState(null);
     const handleQuestionClick = (id) => { ( id === currentQuestionId ) ? setCurrentQuestionId(null) : setCurrentQuestionId(id); }
     
