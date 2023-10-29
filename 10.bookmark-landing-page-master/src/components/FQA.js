@@ -5,29 +5,25 @@ const data = [
     {
         id: 1,
         question: 'What is Bookmark?',
-        answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt \
-                 justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.',
+        answer: 'Bookmark is a digital or physical marker used to save and easily access a specific location or webpage.',
     },
     {
         id: 2,
         question: 'How can I request a new browser?',
-        answer: 'Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. \
-                 Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, \
-                 ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. \
-                 Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.',
+        answer: "You can request a new browser by downloading one from a trusted source or by\
+                 installing an alternative browser through your device's app store or official website.",
     },
     {
         id: 3,
         question: 'Is there a mobile app?',
-        answer: 'Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum \
-                 urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed \
-                 sollicitudin ex et ultricies bibendum.',
+        answer: 'Yes, there is a mobile app available for download. You can find it on the app store or the official website.',
     },
     {
         id: 4,
         question: 'What about other Chromium browsers?',
-        answer: 'Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam \
-                 vitae neque eget nisl gravida pellentesque non ut velit.',
+        answer: 'Other Chromium-based browsers offer similar features and performance to Google Chrome \
+                 due to their shared underlying technology. Some popular options include Microsoft Edge, \
+                 Firefox, and Opera. You can choose one that best suits your preferences and needs.',
     },
 ]
 
