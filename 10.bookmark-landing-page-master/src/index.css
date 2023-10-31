@@ -5,6 +5,7 @@
 
 :root{
   --blue: #5267DF;
+  --red: #FA5959;
 }
 
 *{
@@ -38,11 +39,16 @@ p {
 .mt-18{
   margin-top: 72px;
 }
+.max-width-300{
+  max-width: 300px;
+}
 .headline{
   font-size: 15px;
   line-height: 32px;
 }
-
+input:focus-visible{
+  outline-color:black;
+}
 /* color */
 .background{
   position: absolute;
@@ -85,5 +91,14 @@ p {
   letter-spacing: 4.5px;
 }
 .question--hover:hover>h2{
-  @apply text-red-400;
+  color: var(--red);
+}
+.btn__red{
+  background-color: var(--red);
+  border: 2px solid var(--red);
+  color: white;
+}
+.btn__red--hover:hover{
+  background: white;
+  color: var(--red);
 }

@@ -3,7 +3,7 @@ import Showcase from '../src/components/Showcase';
 import Tabs from '../src/components/Tabs';
 import Download from '../src/components/Download';
 import FQA from './components/FQA';
-import Footer from './components/Footer';
+import CTA from './components/CTA';
 
 function App() {
   return(
@@ -13,7 +13,7 @@ function App() {
       <Tabs />
       <Download />
       <FQA />
-      <Footer />
+      <CTA />
     </>
   );
 }
