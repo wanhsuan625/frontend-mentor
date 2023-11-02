@@ -73,7 +73,7 @@ function Tab() {
                             <div className='background-left'></div>
                         </figure>
 
-                        <article className='text-center mt-16 md:text-left md:mt-0'>
+                        <article className='text-center mt-20 md:text-left md:mt-0'>
                             <h2 className='text-2xl leading-loose py-0.5 md:mb-4'> {title} </h2>
                             <p className='md:w-4/5'> {content} </p>
                             <button
