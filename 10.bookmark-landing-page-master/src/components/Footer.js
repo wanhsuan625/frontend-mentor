@@ -4,7 +4,6 @@ import { ReactComponent as Facebook } from '../images/icon-facebook.svg';
 import { ReactComponent as Twitter } from '../images/icon-twitter.svg';
 
 function Footer(){
-    const [ isHover , setIsHover ] = useState(false);
     return (
     <>
         <footer className='max-w-7xl mx-auto bg-black_set px-28 pt-10 pb-11
