@@ -1,11 +1,10 @@
 import React , { useState } from 'react';
 import logoFooter from '../images/logo-bookmark-footer.svg';
-import menu from '../images/icon-hamburger.svg';
-import facebook from '../images/icon-facebook.svg';
-import twitter from '../images/icon-twitter.svg';
+import { ReactComponent as Facebook } from '../images/icon-facebook.svg';
+import { ReactComponent as Twitter } from '../images/icon-twitter.svg';
 
 function Footer(){
-
+    const [ isHover , setIsHover ] = useState(false);
     return (
     <>
         <footer className='max-w-7xl mx-auto bg-black_set px-28 pt-10 pb-11
@@ -23,9 +22,9 @@ function Footer(){
                 <li className='cursor-pointer hover:text-red_set'>CONTACT</li>
             </ul>
 
-            <ul className='flex justify-center gap-10 md:justify-end md:absolute md:right-10 lg:right-40'>
-                <img src={facebook} alt="" className='cursor-pointer'/>
-                <img src={twitter} alt="" className='cursor-pointer'/>
+            <ul className='flex justify-center items-center gap-10 md:justify-end md:absolute md:right-10 lg:right-40'>
+                <Facebook className='hover:fill-red_set cursor-pointer'/>
+                <Twitter className='hover:fill-red_set cursor-pointer'/>
             </ul>
         </footer>
     </>
