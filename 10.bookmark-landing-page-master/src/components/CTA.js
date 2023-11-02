@@ -32,7 +32,7 @@ function CTA(){
 
     return (
         <>
-            <section className='w-max-7xl h-90 bg-blue_set px-8 py-6'>
+            <section className='h-90 bg-blue_set px-8 py-6'>
                 <article className='pt-4 w-110 mx-auto text-center'>
                     <p className='text-xs leading-10 letter-5 text-white'>35,000+ already joined</p>
                     <h1 className='text-xl text-white md:text-4xl lg:mt-6'>Stay up-to-date with what we’re doing</h1>

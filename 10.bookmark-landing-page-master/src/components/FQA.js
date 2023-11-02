@@ -34,7 +34,7 @@ function FQA (){
     
     return (
         <>
-            <section className='w-max-7xl text-center mx-8 mb-32 lg:mb-36'>
+            <section className='text-center mx-8 mb-32 lg:mb-36 lg:px-10 xl:px-40'>
                 <article>
                     <h1 className='text-2xl py-0.5 md:leading-loose'>Frequently Asked Questions</h1>
                     <p className='mx-auto md:w-2/3 lg:1/2 mt-4 mb-11 md:mb-14'>

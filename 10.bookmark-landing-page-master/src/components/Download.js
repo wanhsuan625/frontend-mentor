@@ -7,7 +7,7 @@ import opera from '../images/logo-opera.svg';
 function Download(){
     return (
         <>
-            <section className='max-w-7xl mx-auto mb-36 px-8 text-center lg: mt-32'>
+            <section className='mx-auto mb-36 px-8 text-center lg: mt-32 lg:px-10 xl:px-40'>
                 <article className='mb-10'>
                     <h2 className='text-2xl leading-loose py-0.5'>Download the extension</h2>
                     <p className='mx-auto md:w-2/3 lg:1/2'>

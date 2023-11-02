@@ -8,15 +8,15 @@ import twitter from '../images/icon-twitter.svg';
 function Header() {
     return(
       <>
-          <header className='flex items-center justify-between p-8 pb-0 max-w-7xl mx-auto'>
+          <header className='flex items-center justify-between p-8 pb-0 mx-auto lg:px-10 xl:px-40'>
             <a href='#' className='hover:cursor-pointer'>                
                 <div>
                     <img src={logo} alt='Bookmark'/>
                 </div>
             </a>
 
-            <nav className='hidden'>
-                <ul>
+            <nav className='hidden md:block'>
+                <ul className='flex gap-11'>
                     <li>
                         <button>FEATURES</button>
                     </li>
@@ -32,7 +32,7 @@ function Header() {
                 </ul>
 
                 {/* social media */}
-                <ul>
+                <ul className='hidden'>
                     <li>
                         <img src={facebook} alt=''/>
                     </li>
@@ -42,7 +42,7 @@ function Header() {
                 </ul>
             </nav>
 
-            <div className='hover:cursor-pointer'>
+            <div className='hover:cursor-pointer md:hidden'>
                 <img src={menu} alt='' />
             </div>
           </header>

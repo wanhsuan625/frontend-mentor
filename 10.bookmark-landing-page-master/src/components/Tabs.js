@@ -42,7 +42,7 @@ function Tab() {
 
     return(
         <>
-            <section className='px-8 pt-14 pb-20 max-w-7xl mx-auto'>
+            <section className='px-8 pt-14 pb-20 mx-auto lg:px-10 xl:px-40'>
                 <article className='text-center'>
                     <h1 className='text-2xl leading-loose'>Features</h1>
                     <p className='mx-auto mt-1 mb-10 md:w-2/3 lg:1/2'>

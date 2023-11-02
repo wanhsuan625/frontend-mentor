@@ -5,7 +5,7 @@ function Showcase(){
     return (
         <>
             <section className='flex flex-col-reverse px-8 py-20
-             md:grid md:grid-cols-2 md:gap-16 md:place-items-center max-w-7xl mx-auto'>
+             md:grid md:grid-cols-2 md:gap-16 md:place-items-center mx-auto lg:px-10 xl:px-40'>
             
                 <article className='text-center md:text-left'>
                     <h1 className='text-3xl mb-4 mt-12 md:text-4xl'>A Simple Bookmark Manager</h1>
