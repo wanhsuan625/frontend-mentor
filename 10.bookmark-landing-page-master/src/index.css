@@ -102,6 +102,3 @@ input:focus-visible{
   background: white;
   color: var(--red);
 }
-.fill-red_set--hover{
-  fill: var(--red);
-}
