@@ -7,12 +7,14 @@ function CTA(){
     const [ email , setEmail ] = useState('');
     const [ checked , setChecked ] = useState(false);
     const [ valid , setValid ] = useState(true);
+    const [ focusVisibleEnabled , setFocusVisibleEnabled ] = useState(true);
 
     let emailValue = ( e ) => {    
         let value = e.target.value;
         setEmail( value );
-        setValid( true );
-        setChecked( false );
+        setFocusVisibleEnabled(true);
+        setValid(true);
+        setChecked(false);
     }
 
     // return the result of email validation
@@ -21,6 +23,7 @@ function CTA(){
         let checkEmailValid = emailRegex.test( email );
         setValid( checkEmailValid );
         setChecked(true);
+        setFocusVisibleEnabled(false);
     }
     
     let handleKeyPress = ( e ) => {
@@ -35,15 +38,15 @@ function CTA(){
                     <h1 className='text-xl text-white'>Stay up-to-date with what we’re doing</h1>
 
                     <div className='mt-8 lg:flex lg:items-start lg:gap-4'>
-                        <div className={`rounded-md mb-4 text-left border-x-2 border-transparent ${ checked ? valid ? 'bg-green_set border-green_set' : 'bg-red_set border-2 border-red_set' : null}`}>
+                        <div className={`rounded-md mb-4 text-left border-x-2 border-transparent ${ checked ? valid ? 'bg-green_set border-2 border-green_set' : 'bg-red_set border-2 border-red_set' : null}`}>
                             <input
                                 type='email'
                                 name='email'
                                 placeholder='Enter your email address'
                                 onChange={emailValue}
                                 onKeyDown={handleKeyPress}
-                                className='w-full rounded-md py-3 pl-5 focus-visible:outline-none lg:w-74
-                                         focus-visible:outline-red_set focus-visible:outline-offset-0 focus-visible:outline-dashed'
+                                className={`w-full rounded-md py-3 pl-5 focus-visible:outline-none lg:w-74
+                                          ${ focusVisibleEnabled ? 'focus-visible:outline-red_set focus-visible:outline-offset-0 focus-visible:outline-dashed' : null }`}
                             />
                             { checked ? 
                                 valid ?
