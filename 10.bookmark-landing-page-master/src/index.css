@@ -51,7 +51,7 @@ input:focus-visible{
   outline-color:black;
 }
 .header__unfold{
-  position: absolute;
+  position: fixed;
   align-items: start;
   top: 0;
   left: 0;
