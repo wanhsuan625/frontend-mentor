@@ -6,6 +6,7 @@
 :root{
   --blue: #5267DF;
   --red: #FA5959;
+  --black: #242A45;
 }
 
 *{
@@ -49,6 +50,41 @@ p {
 input:focus-visible{
   outline-color:black;
 }
+.header__unfold{
+  position: absolute;
+  align-items: start;
+  top: 0;
+  left: 0;
+  background-color: var(--black);
+  opacity: 90%;
+  z-index: 10;
+  width: 100vw;
+  height: 100%;
+}
+.nav__unfold{
+  width: calc(100% - 64px );
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 105px;
+  border-top: 1px solid #FFFFFF80;
+}
+.nav__link{
+  width: 100%;
+  padding: 24px 0;
+  border-bottom: 1px solid #FFFFFF80;
+}
+.nav__link:active{
+  background-color: #FFFFFF95;
+  border-radius: 5px;
+}
+.nav__button{
+  margin: 24px 0 100px 0;
+  padding: 16px 120px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
 /* color */
 .background{
   position: absolute;
@@ -101,4 +137,12 @@ input:focus-visible{
 .btn__red--hover:hover{
   background: white;
   color: var(--red);
+}
+
+.nav__btn{
+  @media ( min-width: 768px ){
+    background-color: var(--red);
+    border: 2px solid var(--red);
+    color: white;
+  }
 }

@@ -1,49 +1,55 @@
-import React from 'react';
+import React , { useState } from 'react';
 import logo from '../images/logo-bookmark.svg';
 import logoDark from '../images/logo-bookmark-dark.svg';
 import menu from '../images/icon-hamburger.svg';
-import facebook from '../images/icon-facebook.svg';
-import twitter from '../images/icon-twitter.svg';
+import close from '../images/icon-close.svg';
+import { ReactComponent as Facebook } from '../images/icon-facebook.svg';
+import { ReactComponent as Twitter } from '../images/icon-twitter.svg';
 
 function Header() {
+    const  [ isUnfold , setIsUnfold ] = useState(false);
+    let handleMenuClick = () => { 
+        setIsUnfold(!isUnfold)
+    };
+    
     return(
       <>
-          <header className='flex items-center justify-between p-8 pb-0 mx-auto lg:px-10 xl:px-40'>
-            <a href='#' className='hover:cursor-pointer'>                
+          <header className={`flex justify-between p-8 pb-0 ${ isUnfold ? 'header__unfold' : null } mx-auto lg:px-10 xl:px-40`}>
+            <a href='#' className='hover:cursor-pointer'>         
                 <div>
-                    <img src={logo} alt='Bookmark'/>
+                    <img src={ isUnfold ? logoDark : logo } alt='' />
                 </div>
             </a>
 
-            <nav className='hidden md:block'>
-                <ul className='flex gap-11'>
+            <nav className={ isUnfold ? 'nav__unfold' : 'hidden' }>
+                <ul>
                     <li>
-                        <button>FEATURES</button>
+                        <button className='tracking-widest nav__link hover:text-red_set'>FEATURES</button>
                     </li>
                     <li>
-                        <button>PRICING</button>
+                        <button className='tracking-widest nav__link hover:text-red_set'>PRICING</button>
                     </li>
                     <li>
-                        <button>CONTACT</button>
+                        <button className='tracking-widest nav__link hover:text-red_set'>CONTACT</button>
                     </li>
                     <li>
-                        <button>LOGIN</button>
+                        <button className='tracking-widest nav__button active:translate-y-0.5
+                                         hover:border-red_set hover:text-red_set hover:bg-white'
+                        >LOGIN
+                        </button>
+                    </li>
+
+                    {/* social media */}
+                    <li className='flex justify-center gap-10 md:hidden'>
+                        <Facebook className='hover:fill-red_set cursor-pointer active:translate-y-0.5'/>
+                        <Twitter className='hover:fill-red_set cursor-pointer active:translate-y-0.5'/>
                     </li>
                 </ul>
 
-                {/* social media */}
-                <ul className='hidden'>
-                    <li>
-                        <img src={facebook} alt=''/>
-                    </li>
-                    <li>
-                        <img src={twitter} alt=''/>
-                    </li>
-                </ul>
             </nav>
 
-            <div className='hover:cursor-pointer md:hidden'>
-                <img src={menu} alt='' />
+            <div className='hover:cursor-pointer md:hidden' onClick={handleMenuClick}>
+                <img src={ isUnfold ? close : menu } className='menu' alt='' />
             </div>
           </header>
       </>
