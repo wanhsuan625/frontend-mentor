@@ -68,11 +68,16 @@ input:focus-visible{
   position: absolute;
   top: 105px;
   border-top: 1px solid #FFFFFF80;
+  
 }
 .nav__link{
   width: 100%;
   padding: 24px 0;
   border-bottom: 1px solid #FFFFFF80;
+
+  @media screen and ( min-width : 768px ){
+    padding: 0;
+  }
 }
 .nav__link:active{
   background-color: #FFFFFF95;
@@ -83,6 +88,14 @@ input:focus-visible{
   padding: 16px 120px;
   border: 2px solid white;
   border-radius: 5px;
+
+  @media screen and ( min-width: 768px ){
+    padding: 6px 26px;
+    margin: 0;
+    border-color: var(--red);
+    background-color: var(--red);
+    color: white;
+  }
 }
 
 /* color */
