@@ -9,7 +9,7 @@ function Footer(){
         <footer className='bg-black_set'>
             <div className='max-w-6xl  px-28 pt-10 pb-11 lg:px-5 mx-auto
                            md:py-8 md:px-10 md:flex'>
-                <a href='#'>
+                <a href='/frontend-mentor/10.bookmark-landing-page-master/public/index.html'>
                     <div className='w-full'>
                         <img src={logoFooter} alt='Bookmark' className='cursor-pointer mx-auto'/>
                     </div>
