@@ -20,7 +20,7 @@ function Header() {
     
     return(
       <>
-          <header className={`flex justify-between items-center p-8 pb-0 ${ isUnfold ? 'header__unfold' : null } lg:px-10 xl:px-40`}>
+          <header className={`flex justify-between items-center p-8 pb-0 ${ isUnfold ? 'header__unfold' : null } lg:px-5 max-w-6xl mx-auto`}>
             <a href='#' className='hover:cursor-pointer'>         
                 <div>
                     <img src={ isUnfold ? logoDark : logo } alt='' />
